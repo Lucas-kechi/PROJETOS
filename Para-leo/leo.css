@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    color: azure;
+}
+body{
+    background-image: url(https://images.alphacoders.com/109/1093.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+h1{
+    margin: 15px auto 50px;
+    background-image: url(https://i.pinimg.com/564x/7c/41/bd/7c41bd406ef66e7c8f86a51de30bfd18.jpg);
+    background-position: center;
+    width: 450px;    
+    font-size: 75px;
+    text-align: center;
+    font-style: italic;
+    border-width: 10px;
+    border-color: rgba(3, 253, 15, 0.904);
+    border-style: double;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    background-color: #000000;
+    position: relative;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: double;
+    border-radius: 10px;
+}
+p{
+    text-align: center;
+    background-color: #000000;
+    position: relative;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: double;
+    border-radius: 10px;
+}
+.leo{
+    background-image: url(img/planoleo.jpg);
+    background-size: cover;
+    width: 1000px;
+    background-color: #000000;
+    margin: 10px auto;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: double;
+    border-radius: 10px;
+    
+}
+.kaua{
+    background-image: url(img/planokaua.jpg);
+    background-size: cover;
+    width: 1000px;
+    background-color: #000000;
+    margin: 25px auto;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: double;
+    border-radius: 10px;
+}
+#faceleo{
+    position: relative;
+    left: 250px;
+    bottom: 130px;
+    border-radius: 50px;
+}
+#facekaua{
+    position: relative;
+    left: 250px;
+    bottom: 130px;
+    border-radius: 50px;
+}
+#imgleo{
+    position: relative;
+    left: 10px;
+}
+#imgkaua{
+    position: relative;
+    left: 10px;
+}
+#video{
+    width: 720px;
+    margin: 0 auto 100px;
+    border-width: 10px;
+    border-color: aqua;
+    border-style: double;
+    border-radius: 10px;
+    background-color: #000000;
+}
