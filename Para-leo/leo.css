@@ -6,7 +6,8 @@
 body{
     background-image: url(https://images.alphacoders.com/109/1093.png);
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: cover;
+    background-color: green;
 }
 h1{
     margin: 15px auto 50px;
@@ -40,10 +41,11 @@ p{
     border-radius: 10px;
 }
 .leo{
-    background-image: url(img/planoleo.jpg);
-    background-size: cover;
+    background: rgb(0, 0, 255), url(./img/planokaua.jpg) cover;
     width: 1000px;
-    background-color: #000000;
+    /* background-color: #000000;
+    background-image: url(img/planoleo.jpg);
+    background-size: cover; */
     margin: 10px auto;
     border-width: 10px;
     border-color: aqua;
