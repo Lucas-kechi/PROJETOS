@@ -3,10 +3,20 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url();
+    background-image: url(img/bubble-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1{
+    width: 24em;
     text-align: center;
     font-size: 4em;
+    font-weight: 900;
     margin: 2em 0;
+    color: aquamarine;
+    border: 0.2em;
+    border-style: double;
+    border-radius: 0.5em;
+    position: relative;
+    left: 3em;
 }
