@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url();
+}
+h1{
+    text-align: center;
+    font-size: 4em;
+    margin: 2em 0;
+}
