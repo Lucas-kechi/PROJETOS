@@ -41,17 +41,14 @@ p{
     border-radius: 10px;
 }
 .leo{
-    background: rgb(0, 0, 255), url(./img/planokaua.jpg) cover;
     width: 1000px;
-    /* background-color: #000000;
-    background-image: url(img/planoleo.jpg);
-    background-size: cover; */
+    background: #009 url(img/planoleo.jpg) no-repeat;
+    background-size: cover;
     margin: 10px auto;
     border-width: 10px;
     border-color: aqua;
     border-style: double;
     border-radius: 10px;
-    
 }
 .kaua{
     background-image: url(img/planokaua.jpg);

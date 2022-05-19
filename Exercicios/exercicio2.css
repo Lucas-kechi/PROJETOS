@@ -1,42 +1,65 @@
-body{
-    background-image: url(img/bubble-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-h1{
-    width: 80vw;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 900;
-    margin: 2em 0;
-    color: aquamarine;
-    border: 0.2em;
-    border-style: double;
-    border-radius: 0.5em;
-    position: relative;
-    left: 3em;
-}
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     box-sizing: border-box;
-    color: red;
+}
+body{
+    height: 100vh;
+    /* background: url(img/bubble-background.jpg) no-repeat; */
+    background-color: red;
+    background-size: cover;
+    display: grid;
+   grid-template-areas: "header header" "main aside" "footer footer";
+   grid-template-rows: 20vh 1fr 10vh;
+}
+#cabecalho{
+    /* height: 15vh; */
+    background-color: blue;
+    grid-area: header;
+}
+#sobre{
+    /* height: 40vh; */
+    background-color: yellow;
+    grid-area: main;
+}
+#aolado{
+    /* height: 30vh; */
+    background-color: green;
+    grid-area: aside;
+}
+#rodape{
+    /* height: 15vh; */
+    background-color: brown;
+    grid-area: footer;
+}
+h1{
+    /* width: 80vw; */
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 900;
+    /* margin: 2em 0; */
+    color: aquamarine;
+    border: 0.2em;
+    border-style: double;
+    border-radius: 0.5em;
+    /* position: relative;
+    left: 3em; */
 }
 nav{
     width: 60vw;
-    height: 4em;
-    margin: 2em;
+    /* height: 4em; */
+    /* margin: 2em; */
     background-color: rgb(75, 5, 75);
-    position: relative;
-    left: 17.5em;
+    /* position: relative;
+    left: 17.5em; */
     border: 3px solid;
     border-color: red;
 }
 #navegacao li{
-    margin: 1em;
+    /* margin: 1em; */
     width: 10vw;
-    height: 1.5em;
-    display: inline;
+    /* height: 1.5em; */
+    /* display: inline; */
     background-color: rgb(2, 136, 114);
     font-size: 2em;
     border: 0 3px 3px 3px;
