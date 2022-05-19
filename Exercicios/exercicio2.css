@@ -9,23 +9,15 @@ body{
     background-size: cover;
     display: grid;
    grid-template-areas: "header header" "main aside" "footer footer";
-   grid-template-rows: 20vh 1fr 10vh;
+   grid-template-rows: 30vh 1fr 10vh;
    grid-template-columns: 1fr 30vw;
 }
 #cabecalho{
     grid-area: header;
-}
-#navegacao ul{
     display: flex;
-}
-#sobre{
-    grid-area: main;
-}
-#aolado{
-    grid-area: aside;
-}
-#rodape{
-    grid-area: footer;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 h1{
     text-align: center;
@@ -38,15 +30,31 @@ h1{
 }
 nav{
     width: 60vw;
-    background-color: rgb(75, 5, 75);
-    border: 3px solid;
-    border-color: red;
+}
+#navegacao ul{
+    display: flex;
+    justify-content: space-around;
 }
 #navegacao li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 10vw;
     background-color: rgb(2, 136, 114);
-    font-size: 2em;
+    font-size: 1vw;
+    font-weight: 900;
     border: 0 3px 3px 3px;
     border-style: outset;
     border-color: aqua;
 }
+#sobre{
+    grid-area: main;
+}
+#aolado{
+    grid-area: aside;
+}
+#rodape{
+    grid-area: footer;
+}
+
