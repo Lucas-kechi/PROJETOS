@@ -164,24 +164,52 @@ table caption{
     border-width: 1px;
     background-color: rgb(2, 136, 114);
 }
-#aolado{
+.aolado{
     grid-area: aside;
     background: url(./img/planocorais.jpg) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
-#aolado h3{
-    width: 15vw;
-    font-size: 1.5vw;
+.aolado h3{
+    width: 18vw;
+    font-size: 2.5vw;
     color: aquamarine;
     border: 0.2em;
     border-style: double;
     border-radius: 0.5em;
     text-align: center;
+    margin-top: 1.5vh;
 }
+#titulovideo{
+    font-size: 1vw;
+    color: aquamarine;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+.aolado p{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgb(0, 245, 184);
+    text-align: center;
+    margin-bottom: 1vh;
+    text-align: justify;
+}
+#textoaside{
+    padding: 1vw;
+    height: 80vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
+}
+#video{
+    margin-bottom: 5vh;
+}
 #rodape{
     grid-area: footer;
     display: flex;
