@@ -10,7 +10,7 @@ body{
     display: grid;
    grid-template-areas: "header header" "main aside" "footer footer";
    grid-template-rows: 30vh 1fr 25vh;
-   grid-template-columns: 1fr 30vw;
+   grid-template-columns: 1fr 25vw;
 }
 #cabecalho{
     grid-area: header;
@@ -168,8 +168,34 @@ table caption{
 }
 #rodape{
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#aotopo{
+    text-align: center;
+    width: 10vw;
+    background-color: rgb(2, 136, 114);
+    font-size: 1vw;
+    font-weight: 900;
+    border: 0 3px 3px 3px;
+    border-style: outset;
+    border-color: aqua;
+}
+#rodape img{
+    border-radius: 30px;
 }
 #social{
+    width: 98vw;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+#social div{
+    display: flex;
+    width: 27vw;
+}
+#social img{
+    margin-left: 2vw;
+}
