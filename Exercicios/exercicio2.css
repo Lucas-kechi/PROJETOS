@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    height: 350vh;
     background: url(img/bubble-background.jpg) no-repeat;
     background-size: cover;
     display: grid;
    grid-template-areas: "header header" "main aside" "footer footer";
-   grid-template-rows: 30vh 1fr 10vh;
+   grid-template-rows: 30vh 1fr 25vh;
    grid-template-columns: 1fr 30vw;
 }
 #cabecalho{
@@ -141,12 +141,35 @@ table caption{
     font-size: 1.8vw;
 }
 #bibliografia{
-    background-color: yellow;
+    height: 70vh;
+}
+#bibliografia h3{
+    text-align: center;
+    font-size: 1.8vw;
+}
+#bibliografia ul{
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 0.8vw;
+}
+#bibliografia a{
+    border: 0 3px 3px 3px;
+    border-style: outset;
+    border-color: aqua;
+    border-width: 1px;
+    background-color: rgb(2, 136, 114);
 }
 #aolado{
     grid-area: aside;
 }
 #rodape{
     grid-area: footer;
+}
+#social{
+    display: flex;
 }
 
