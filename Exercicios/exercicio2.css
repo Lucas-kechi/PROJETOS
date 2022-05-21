@@ -96,7 +96,30 @@ table caption{
     font-weight: 900;
 }
 #visao{
+    height: 80vh;
     background-color: brown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#textovisao{
+    font-size: 1vw;
+    width: 40vw;
+    height: 50vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5vw;
+}
+#textovisao h3{
+    text-align: center;
+
+}
+#textovisao p{
+    justify-content: center;
+    text-align: justify;
+    font-weight: 300;
 }
 #boxeador{
     background-color: blue;
