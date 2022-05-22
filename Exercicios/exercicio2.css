@@ -165,8 +165,9 @@ table caption{
     background-color: rgb(2, 136, 114);
 }
 .aolado{
+    height: 1fr;
     grid-area: aside;
-    background: url(./img/planocorais.jpg) no-repeat;
+    background: url(./img/planocorais.png) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -185,14 +186,14 @@ table caption{
 }
 #titulovideo{
     font-size: 1vw;
-    color: aquamarine;
+    color: aliceblue;
     text-align: center;
     margin-bottom: 1vh;
 }
 .aolado p{
     font-size: 1.5vw;
     font-weight: 600;
-    color: rgb(0, 245, 184);
+    color: aliceblue;
     text-align: center;
     margin-bottom: 1vh;
     text-align: justify;
