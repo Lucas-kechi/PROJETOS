@@ -1,4 +1,4 @@
-Nesete exercicio você vai criar uma página de atualização cadastral composta por 2 etapas.
+Neste exercicio você vai criar uma página de atualização cadastral composta por 2 etapas.
 
 ## A página de login
 
