@@ -5,23 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="./exercicio-form2.css">
 </head>
 <body>
     <header>
         <h1>CADASTRE-SE</h1>
     </header>
     <main>
-        <form action="" method="get">
+        <form action="" method="post" id="cadastro">
             <fieldset>
-                <div>
-                    <label for="nome">Nome completo:</label>
+                <div id="nomecompleto">
+                    <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="cadastronome" placeholder="Digite seu nome completo" minlength="10" maxlength="40" size="50">
                 </div>
-                <div>
+                <div id="e-mail">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="cadastroemail" placeholder="Digite seu e-mail" min="10" maxlength="50" size="50">
                 </div>
+                <div id="cargo">
+                    <h3>Selecione seu cargo atual</h3>
+                    <div id="opcao1">
+                        <input type="checkbox" name="cargo" id="dev">
+                        <label for="dev">Dev</label>
+                    </div>
+                    <div id="opcao2">
+                        <input type="checkbox" name="cargo" id="Designer">
+                        <label for="Designer">Designer</label>
+                    </div>
+                    <div id="opcao3">
+                        <input type="checkbox" name="cargo" id="DevOps">
+                        <label for="DevOps">DevOps</label>
+                    </div>
+                    <div id="opcao4">
+                        <input type="checkbox" name="cargo" id="Tester">
+                        <label for="Tester">Tester</label>
+                    </div>
+                </div>
+                <div id="datanascimento">
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento">
+                </div>
+                <div id="curiosidades">
+                    <label for="about">Conte-nos um pouco sobre voce:</label>
+                    <textarea type="text" name="about" id="about" maxlength="500" size="500" cols="30" rows="10"></textarea>
+                </div> 
             </fieldset>
+            <div id="botoes">
+                <button type="submit" form="cadastro" id="enviar">Enviar</button>
+                <button type="reset" form="cadastro" id="limpar">Limpar tudo</button>
+            </div>
         </form>
     </main>
 </body>

@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: grid;
+    grid-template-areas: "header" "main";
+    grid-template-rows: 20vh 1fr;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-size: 8vw;
+}
+main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+}
+form{
+    font-size: 1.5vw;
+}
+fieldset{
+    font-weight: 600;
+    color: palevioletred;
+    background-color: black;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#nomecompleto{
+    display: flex;
+    justify-content: space-around;
+    height: 3.8vh;
+    width: 37vw;
+}
+#e-mail{
+    display: flex;
+    justify-content: space-around;
+    height: 3.8vh;
+    width: 37vw;
+}
+#nome{
+    height: 3vh;
+    width: 25vw;
+    font-size: 1.5vw;
+}
+#email{
+    height: 3vh;
+    width: 25vw;
+    font-size: 1.5vw;
+}
+#cargo{
+    height: 9vh;
+    width: 37vw;
+    display: grid;
+    grid-template-areas: "h3 h3 h3 h3" "opcao1 opcao2 opcao3 opcao4" ;
+    text-align: center;
+}
+#cargo h3{
+    grid-area: h3;
+}
+#opcao1{
+    grid-area: opcao1;
+}
+#opcao2{
+    grid-area: opcao2;
+}
+#opcao3{
+    grid-area: opcao3;
+}
+#opcao4{
+    grid-area: opcao4;
+}
+#datanascimento{
+    display: flex;
+    justify-content: space-around;
+    height: 3.8vh;
+    width: 37vw;
+}
+#nascimento{
+    height: 3vh;
+    font-size: 1.5vw;
+}
+#curiosidades{
+    height: 25vh;
+    width: 37vw;
+    display: flex;
+    flex-direction: column;
+}
+#about{
+    width: 36.7vw;
+    height: 20vh;
+    font-size: 1vw;
+}
+#botoes{
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#enviar{
+    font-size: 2vw;
+    height: 5vh;
+}
+#limpar{
+    font-size: 2vw;
+    height: 5vh;
+}
