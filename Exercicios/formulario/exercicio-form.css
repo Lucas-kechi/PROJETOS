@@ -20,6 +20,7 @@ fieldset{
     color: palevioletred;
     background-color: black;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -32,4 +33,16 @@ legend{
 }
 button{
     width: 4vw;
+}
+div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#checkbox{
+    display: flex;
+    justify-content: center;
+}
+#checkbox label{
+    margin-left: 5px;
 }
