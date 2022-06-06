@@ -10,18 +10,37 @@
     <form action="" method="post">
         <fieldset>
             <legend>Entre em contato</legend>
+            <br>
             <div>
-                <label for="Assunto">Assunto</label>
+                <label for="Assunto">Assunto</label> 
                 <select name="assunto" id="Assunto">
                     <option value="suporte">Suporte</option>
                     <option value="sugestão">Sugestão</option>
                     <option value="reclamação">Reclamação</option>
                 </select>
             </div>
+            <br>
             <div>
-                <label for="Name">Nome completo</label>
-                <input type="text" name="name" id="Name" >
+                <label for="Name">Nome completo</label> <br>
+                <input type="text" name="name" id="Name" placeholder="Digite seu nome completo">
             </div>
+            <br> 
+            <div>
+                <label for="e-mail">E-mail</label> <br>
+                <input type="email" name="email" id="e-mail" placeholder="Digite seu email">
+            </div>
+            <br>
+            <div>
+                <label for="Mensagem">Mensagem</label> <br>
+                <textarea name="mensagem" id="Mensagem" cols="30" rows="10" placeholder="Escreva sua linda mensagem"></textarea>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="adesão" id="adesao">
+                <label for="adesao">Aceito receber novidades por e-mail</label>
+            </div>
+            <br>
+            <button type="submit">Enviar</button>
         </fieldset>
     </form>
 </body>
