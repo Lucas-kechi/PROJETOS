@@ -12,11 +12,15 @@
             <legend>Entre em contato</legend>
             <div>
                 <label for="Assunto">Assunto</label>
-                <input type="select" name="Assunto" id="Assunto" list="option">
-                <datalist id="option">
-                    <option>Suporte</option>
-                    <option>Sugestão</option>
-                </datalist>
+                <select name="assunto" id="Assunto">
+                    <option value="suporte">Suporte</option>
+                    <option value="sugestão">Sugestão</option>
+                    <option value="reclamação">Reclamação</option>
+                </select>
+            </div>
+            <div>
+                <label for="Name">Nome completo</label>
+                <input type="text" name="name" id="Name" >
             </div>
         </fieldset>
     </form>
