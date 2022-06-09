@@ -19,3 +19,16 @@ console.log(25/12.5)
 console.log(2*"lucas")
 //Infinity, tem que ser escrito com a letra "i" em maiusculo "I", sem isso dará erro
 console.log(Infinity+2)
+
+//Boolean
+console.log(true)
+console.log(false)
+
+//Agora veremos as estruturas de um objeto. com propriedade e funcionalidades
+console.log({
+    name: "Lucas",
+    idade: 26,/*Nessas duas linhas temos a propriedade, ou atributos, do meu objeto com seu valores*/
+    andar: function() { /*Mais a frente veremos como funciona o "function". mas o mais interssante aqui é saber que essa é a funcionalidade do meu objeto ou o método*/
+        console.log('andar')
+    }
+})
