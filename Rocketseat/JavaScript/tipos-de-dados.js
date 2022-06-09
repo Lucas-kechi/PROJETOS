@@ -24,11 +24,21 @@ console.log(Infinity+2)
 console.log(true)
 console.log(false)
 
-//Agora veremos as estruturas de um objeto. com propriedade e funcionalidades
+//Agora veremos as estruturas de um object. com propriedade e funcionalidades. Sempre dentro de chaves '{}'
 console.log({
     name: "Lucas",
     idade: 26,/*Nessas duas linhas temos a propriedade, ou atributos, do meu objeto com seu valores*/
-    andar: function() { /*Mais a frente veremos como funciona o "function". mas o mais interssante aqui é saber que essa é a funcionalidade do meu objeto ou o método*/
+    andar: function() { /*Mais a frente veremos como funciona o "function". mas o mais interssante aqui é saber que essa é a funcionalidade do meu objeto, ou o método*/
         console.log('andar')
     }
 })
+
+//Veremos a sintaxe de array. Sempre dentro de colchetes '[ ]'
+console.log([
+    "ovos",
+    12,
+    "Leite",
+    6,
+    "Carne",
+    1
+])
