@@ -42,34 +42,3 @@ console.log([
     "Carne",
     1
 ])
-
-/*Agora veremos as variáveis.
-Começando com a palavra reservada 'var'*/
-var clima = "Quente"
-
-console.log(clima)
-
-clima = "Frio" //Dessa forma podemos mudar as variáveis
-
-console.log(clima)
-
-//agora utilizando a palavra reservada 'let'
-
-let temperatura = 28
-
-console.log(temperatura)
-
-temperatura = 25
-
-console.log(temperatura) //Funciona bem semelhante a palavra reservada 'var'
-
-//Agora ultilizando a palavra reservada 'const'
-
-const peso = 30
-
-console.log(peso)
-
-/* peso = 28
-
-console.log(peso) //Aqui veremos um erro pois a palavra reservada 'const' é sobre uma constante e uma contantes não varia, sempre será o mesmo valor*/
-
