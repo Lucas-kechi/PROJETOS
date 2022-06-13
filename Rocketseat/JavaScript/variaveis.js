@@ -36,3 +36,27 @@ let age = 26 // Declaramos então uma variável do tipo number
 age = false // Agora mudamos a mesma variável para tipo boolean, essa é a dinhâmica do js
 //Para podermos saber qual o tipo das variáveis basta adicionar 'typeof' antes da variável, veja a seguir:
 console.log(typeof age) //assim, consultando no devtools veremos o tipo da variável
+
+/*Veremos agora scope e var
+O var pode ser usado em global scope e também em block-scoped*/
+
+console.log('> Existe x antes do bloco?', x) //aqui imprimimos no console um string e uma variável
+{
+    var x = 2 //Dentro desse bloco declaramos a variável x após a impressão dela no console
+}
+
+/* Logo, nesse exemplo o x estará undefined e não um erro, pois o código do JS é lido de maneira vertical de cima para baixo. Contudo,
+o JS tem um comportamento especial para 'var' por debaixo dos panos, exemplo:*/
+
+var y //É aqui onde entra a declaração da variável quando usamos o var. porém sem valor por isso recebemos undefined.
+
+console.log('> Existe y antes do bloco?', y) 
+{
+    y = 2 
+}
+/*Isso é o que acontece debaixo dos panos, durante a leitura do código. E o resultado dos 2 exemplos acima serão os mesmo
+Esse conceito se chama HOISTING (elevação)
+Agora se usarmos o console log após o bloco teremos o valor da variável*/
+
+console.log('> Existe x depois do bloco?', x)
+console.log('> Existe y depois do bloco?', y)
