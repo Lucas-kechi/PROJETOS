@@ -60,4 +60,96 @@
 }
 {
     //Exercícios 
+    {
+        // 1) declare uma variável weight
+        // R:
+        let weight
+        // 2) Que tipo de dado é a variável acima?
+        //R: Undefined
+        console.log(typeof weight)
+    }
+    {
+        /* 
+            3) Declare uma variável e atribua valores a cada um dos dados:
+            - name: string
+            - age: number (integer)
+            - starts: number (float)
+            - isSubscribed: boolean 
+        */ //R:
+            let name = 'Chief'
+            let age = 32
+            let stars = 4.9
+            let isSubscribed = false
+    }
+    {
+        /*
+            4) A variável student abaixo é de que tipo de dados?
+            let student = {}
+            4.1) Atribua a ela as mesmas propriedades e valores do exercício 3 e 1
+            4.2) Mostre no console a seguinte mensagem:
+            <name> de idade <age> pesa <weight> kg.
+            ATENÇÃO, substitua <name> <age> e <weight> pelos valores de cada propriedade do objeto  
+        */ 
+        // R4: A variável é do tipo de dado object
+        
+        // R4.1:
+        let student = {
+            name: 'Valber',
+            age: 32,
+            stars: 4.4,
+            weight: 78.7,
+            isSubscribed: true
+        }
+        //R4.2:
+        console.log(`${student.name} de idade ${student.age} pesa ${student.weight}kg.`)
+        /*
+            5) Declare uma variável do tipo Array, de nome students e 
+            atribua a ela nenhum valor, ou seja, somente o array vazio
+        */
+        //R:
+         let students = []
+        console.log(typeof students)
+
+         /*
+            6) Reatribua valor para a variável acima, colocando dentro dela o objeto student da questão 4.
+            (Não copiar e colar o objeto, mas usar o objeto criado e inserir ele no Array)
+         */
+        // R:
+        students = [
+            student
+        ]
+
+        /*
+            7) Coloque no console o valor da posição 0 do Array acima
+        */
+        // R:
+        console.log(students[0])
+
+        /*
+            8) Crie um novo student e coloque na posição 1 do Array students
+        */
+        // R:
+        const dri = {
+            name: 'Adriana',
+            age: 36,
+            weight: 88.5,
+            isSubscribed: false,
+        }
+        students[1] = dri //forma de adicionar uma posição a um Array
+    }
+    {
+        /*
+            9) Sem rodar o código, responda qual é a resposta do código abaixo e
+            por que? Após sua resposta, rode o código e veja se você acertou
+
+            console.log(a)
+            var a = 1
+
+            R: O console.log está sendo usado antes da declaração da variável logo não existiria uma declaração. 
+            Porém quando tratamos da palavra reservada var, temos o que chamamos de hoisting(elevação). Então a declaração 
+            da variável irá subir acima do console.log porém sem seu valor. Logo a resposta no console será UNDEFINED.
+        */
+            console.log(a)
+            var a = 1
+    }
 }
