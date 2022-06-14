@@ -38,5 +38,26 @@
         //podemos adicionar vários tipos de dados aqui, numbers, objects, etc.
     ]
     /* Como acessar valores dentro de um array?
-    Arrays tem seus valores*/
+    Arrays tem seus valores e esses valores tem posições, começando de 0 indo até quantos valores inserirmos, sendo assim:*/
+    //se quero apenas o frog, neste caso:
+    console.log(animals[1])
+
+    // Também podemos ver o tamanho de um array acrescentando .length depois do nome do array. Exemplo:
+    console.log(animals.length)
+    // Também podemos inserir objetos em meu array
+    const people = [
+        'Lucas',
+        'Larissa',
+        {
+            name: 'Daniele',
+            age: 11,
+            weight: 52
+        }
+    ]
+    // dessa forma criamos um array com strings e objeto
+    console.log(people[2].name) //Assim consigo acessar um atributo de um objeto dentro de um array
+    console.log(`Eu sou ${people[2].name} e tenho ${people[2].weight}kg`)
+}
+{
+    //Exercícios 
 }
