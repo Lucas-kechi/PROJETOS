@@ -37,12 +37,46 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
         Exemplo:
     */ 
     // function statement
-    const sum = function(number1, number2) { //veja que dentro dos parenteses eu determinei os parameters number1 e number2
+    const soma = function(number1, number2) { //veja que dentro dos parenteses eu determinei os parameters number1 e number2
         console.log(number1 + number2)
     }
     // function evoke
-    sum(3, 4)  
+    soma(3, 4)  
 
     // desta forma como determinei no statement que no console.log o number1 iria somar a number2, 3 mais 4 será 7
     // assim estou utilizando parameters e arguments na minha function
+
+    //Agora vamos mostrar como pegar valores dentro de uma function
+    const sum = function(number1, number2){
+        let total = number1 + number2
+        return total //Com esse return mais o valor que quero consigo retornar ele quando solicitado
+    }
+    let number1 = 24
+    let number2 = 26
+    console.log(`O primeiro número é ${number1}`)
+    console.log(`O segundo número é ${number2}`)
+    console.log(`A soma entre eles é ${sum(number1, number2)}`) // aqui estamos solicitando o valor na function
+
+    /*OUTRA MANEIRA DE ENTENDER FUNÇÕES
+    Explicando funções de uma maneira mais lúdica.
+    
+    Imagine que as funções são como liquidificadores : 
+    function liquidificador()
+    
+    E quero fazer uma vitamina de 2 frutas nesse liquidificador , então preciso determinar 2 frutas aos parâmetros desse liquidificador, então agora nosso código ficará assim:
+    function liquidificador(fruta1, fruta2)
+    
+    E dentro do liquidificador preciso determinar o que ele vai fazer com as frutas:*/
+    function liquidificador(fruta1, fruta2){
+        return fruta1 + fruta2
+    }
+    
+    //Agora precisamos escolher quais frutas irão para nosso liquidificado e um copo para despejar o conteúdo:
+    const copo = liquidificador('banana', 'morango')
+    
+    //Agora precisaremos ver o resultado desse processo:
+    console.log(copo)
+    
+    //OBS: Concluímos que com as functions podemos inserir coisas e obter resultados, através de processamentos por parameters e arguments.
+
 }
