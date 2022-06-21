@@ -121,3 +121,35 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
         }
     )
 }
+{
+    // function constructor (funções contrutoras)
+    /*
+        São funções que servem como "objeto molde". Temos 3 importantes coisas:
+        - A expressão 'new' antes de executar a function constructor
+        - Cada vez que criarmos uma variável e igualarmos a function constructor iremos criar um novo object, que o 'molde' é a function
+        - Password 'this', dentro da function toda vez que quisermos adicionar uma propriedade devemos adicionar a palavra chave 'this'
+        Exemplo: this.name = (o parameter referente ao nome), this.age = (parameter referente a idade), etc.
+
+        Sabendo disso vamos criar uma function constructor
+    */
+    function Person(name, age, weight) {    //OBS: De preferência a primeira letra do nome da function constructor deve ser maiúscula.
+        this.name = name                    // Aqui adicionamos a palavre chave 'this' para criar uma propriedade
+        this.age = age
+        this.weight = weight + "kg"
+        this.walk = () => {                 //Aqui determinamos uma function para a funcionalidade desse objeto
+            return this.name + " está andando"
+        }
+    }
+    const lucas = new Person("Lucas", 26, 98.8) // Aqui criamos um variável 'const' e quando igualarmos ela devemos acrescentar a expressão new antes da function
+    const leo = new Person("Leo", 11, 52.5)     // podemos observar também os arguments de em concordância com os parameters da linha 135
+
+    console.log(lucas)
+    console.log(leo)
+    console.log(lucas.walk())                   // e Aqui mostraremos no console a funcionalidade do object
+    console.log(leo.walk())
+
+    /*
+        Concluimos que uma function constructor é como uma forma para objects, assim teremos sempre um padrão para objects do mesmo tipo
+        podendo apenas criando uma variavel e adicionando a function, com os arguments sendo as propriedades do seu object.
+    */
+}
