@@ -77,6 +77,6 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
     //Agora precisaremos ver o resultado desse processo:
     console.log(copo)
     
-    //OBS: Concluímos que com as functions podemos inserir coisas e obter resultados, através de processamentos por parameters e arguments.
+    //OBS: Concluímos que, com as functions podemos inserir coisas e obter resultados, através de processamentos, por parameters e arguments.
 
 }
