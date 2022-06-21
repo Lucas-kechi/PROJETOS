@@ -95,3 +95,11 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
     } /*Isso é um erro, pois o var sofre hoisting pois é undefined como foi mostrado antes, assim não sofre hoisting 
     de uma function logo na execução da function teremos um erro*/
 }
+{
+    /*Agora veremos arrow function */
+    const sayYourName = () => { //nota-se que retiramos a palavra 'function' após o igual, e adicionamos uma seta '=>' entre o parentese e a chave.
+        console.log('Levi')
+    } /* Geralmente arrow function é sempre atribuída a uma constante, é basicamente a maneira mais rápida de se escrever um expression function. 
+    Lembrando que expression function não sofre hoisting*/
+    console.log('sayYourName')
+}
