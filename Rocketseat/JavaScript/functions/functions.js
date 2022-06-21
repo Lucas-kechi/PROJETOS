@@ -80,3 +80,18 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
     //OBS: Concluímos que, com as functions podemos inserir coisas e obter resultados, através de processamentos, por parameters e arguments.
 
 }
+{
+    // Agora mostraremos o hoisting das functions
+    sayMyName()  //function executada.
+		function sayMyName() {
+			console.log('Lucas')
+    } //Assim ela primeiro foi executada e depois declarada, mas sofrerá hoisting e não haverá erro.
+
+    /*OBS: Lembrando que somente function do tipo statement ou declaration sofre hoisting.
+    Expressões de function não sofrem hoisting, Exemplo:*/
+            sayMyLastName()
+            var sayMyLastName = function() {
+                console.log('Paiva')
+    } /*Isso é um erro, pois o var sofre hoisting pois é undefined como foi mostrado antes, assim não sofre hoisting 
+    de uma function logo na execução da function teremos um erro*/
+}
