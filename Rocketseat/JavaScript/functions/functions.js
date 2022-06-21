@@ -89,10 +89,11 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
 
     /*OBS: Lembrando que somente function do tipo statement ou declaration sofre hoisting.
     Expressões de function não sofrem hoisting, Exemplo:*/
-            sayMyLastName()
+    /*        sayMyLastName()
             var sayMyLastName = function() {
                 console.log('Paiva')
-    } /*Isso é um erro, pois o var sofre hoisting pois é undefined como foi mostrado antes, assim não sofre hoisting 
+                    
+    } Isso é um erro, pois o var sofre hoisting pois é undefined como foi mostrado antes, assim não sofre hoisting 
     de uma function logo na execução da function teremos um erro*/
 }
 {
@@ -101,5 +102,22 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
         console.log('Levi')
     } /* Geralmente arrow function é sempre atribuída a uma constante, é basicamente a maneira mais rápida de se escrever um expression function. 
     Lembrando que expression function não sofre hoisting*/
-    console.log('sayYourName')
+    sayYourName()
+}
+{
+    // Agora veremos como produzir uma callback
+    /*
+        É uma function dentro de uma function, faremos uma function com um parameter e ao fazer a call dessa function determinamos 
+        um outra function em seus arguments, assim, toda vez que usarmos esse parameter dentro da primeira function teremos a segunda 
+        function, isso se chama callback. Exemplo:
+    */
+    function makingCallback(callback) {
+        callback()
+    }
+
+    makingCallback(
+        () => {
+            console.log('Isso é uma callback')
+        }
+    )
 }
