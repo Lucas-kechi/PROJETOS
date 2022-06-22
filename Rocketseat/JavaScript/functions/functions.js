@@ -122,7 +122,7 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
     )
 }
 {
-    // function constructor (funções contrutoras)
+    // function constructor (funções construtoras)
     /*
         São funções que servem como "objeto molde". Temos 3 importantes coisas:
         - A expressão 'new' antes de executar a function constructor
@@ -141,8 +141,8 @@ createPhrases() // Simples assim, agora toda vez que executada ira rodar o códi
         }
     }
     const lucas = new Person("Lucas", 26, 98.8) // Aqui criamos um variável 'const' e quando igualarmos ela devemos acrescentar a expressão new antes da function
-    const leo = new Person("Leo", 11, 52.5)     // podemos observar também os arguments de em concordância com os parameters da linha 135
-
+    const leo = new Person("Leo", 11, 52.5)     // podemos observar também os arguments de em concordância com os parameters da linha 13
+    const luciano = new Person('Luciano', )
     console.log(lucas)
     console.log(leo)
     console.log(lucas.walk())                   // e Aqui mostraremos no console a funcionalidade do object
