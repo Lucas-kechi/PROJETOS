@@ -95,3 +95,43 @@
     let word = 'manipulação'
     console.log(Array.from(word)) // Desta forma, a string será dividida em caracteres onde cada um será um elemento do array.
 }
+{
+    //MANIPULANDO ARRAYS
+    let ingredientsCake = ['ovo', 'leite', 'farinha']
+    console.log(ingredientsCake)
+
+    //Adicionar um item no fim, usamos o .push()
+    ingredientsCake.push('chantily')
+    console.log(ingredientsCake)
+    //Adicionar um item no começo, usamos o .unshift()
+
+    ingredientsCake.unshift('fermento')
+    console.log(ingredientsCake)
+
+    //Remover item do fim, usamos o .pop()
+    ingredientsCake.pop()
+    console.log(ingredientsCake)
+
+    //Remover item do começo, usamos o .shift()
+    ingredientsCake.shift()
+    console.log(ingredientsCake)
+
+    //Pegar somente alguns elementos do array. Usamos o .slice() para cortar os elementos que quero pegar
+    ingredientsCake.push('Chantily')
+    ingredientsCake.unshift('Fermento')
+    console.log(ingredientsCake.slice(3,5)) /*No argument do slice primeiro usamso o número de index do primeiro
+     elemento que queremos depois o valor de até qual eleemntos queremos pegar*/
+
+    //Remover 1 ou mais elementos de qualquer posição do array. Usamos o .splice()
+    ingredientsCake.splice(3,5)
+    console.log(ingredientsCake) //Assim retiramos do nosso array os dois últimos elementos
+
+    //Encontrar a posição de um elemento no array
+    ingredientsCake.push('Farinha', 'Chantily')
+    let index = ingredientsCake.indexOf('leite')
+    ingredientsCake.splice(index, 1)
+    console.log(ingredientsCake) /* Podemos retirar elementos dessa forma quando temos muitos elementos dentro do meu array
+    e não sei em qual index ele se encontra, então criei uma varável com .indexof(nome do eleemnto) para achar esse elemento
+    depois usei um .splice() com a variável index dentro do primeiro argumento e o segundo argumento colocamos 1 que so queremos
+    retirar um argumento*/
+}
