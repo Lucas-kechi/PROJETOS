@@ -71,3 +71,12 @@
      let arrayIsNowString = myArray.join('_')
      console.log(arrayIsNowString.toLowerCase())
 }
+{
+    // Criando arrays com o construtor
+    // Já conhecemos o jeito simples de contruir um array
+    let myArray = [1, 2, 3,4]
+    console.log(myArray)
+    // Agora um array com construtor ele contém no argumento os objetos desse array
+    let newArray = new Array('leite', 'ovo', 'farinha', 'fermento')
+    console.log(newArray)
+}
