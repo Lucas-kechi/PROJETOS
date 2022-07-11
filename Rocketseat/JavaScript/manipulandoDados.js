@@ -54,3 +54,8 @@
     let fell = 'FELICIDADE'
     console.log(fell.toLowerCase())
 }
+{
+    /*Encontrando palavras dentro dos meu textos*/
+    let phrase = 'Quero viver o amor'
+    console.log(phrase.includes('amor')) //Assim retornará um boolean se contém ou não a palavra
+}
