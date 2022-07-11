@@ -80,3 +80,11 @@
     let newArray = new Array('leite', 'ovo', 'farinha', 'fermento')
     console.log(newArray)
 }
+{
+    // Contando elementos dentro de um array
+    console.log([
+        "Viva",
+        24,
+        () => {return "Ola"},
+    ].length) // Assim teremos o retorno de quantos elementos tenho dentro do meu array
+}
