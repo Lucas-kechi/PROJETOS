@@ -40,7 +40,17 @@
     são representados com um ponto e não uma vírgula, mas podemos substituir no console para vírgula porém esse dado se tornará uma string. Exemplos*/
 	let float = 3.14159265
 	console.log(float.toFixed(2)) //Assim teremos o resultado 3,14
-    console.log(typeof float.toFixed(2))
+    console.log(typeof Number(float.toFixed(2)))
 	console.log(float.toFixed(4).replace(".", ",")) //Assim substituímos o ponto por uma vírgula porém o dado agora é uma string
     console.log(typeof float.toFixed(4).replace(".", ","))
+}
+{
+    /*
+        Maiúsculas e minúsculas
+    
+        Podemos transformas as letras usando toUpperCase() ou toLowerCase(), Exemplos*/
+    let phrase = 'Programar é muito bacana!'
+    console.log(phrase.toUpperCase())
+    let fell = 'FELICIDADE'
+    console.log(fell.toLowerCase())
 }
