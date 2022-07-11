@@ -88,3 +88,10 @@
         () => {return "Ola"},
     ].length) // Assim teremos o retorno de quantos elementos tenho dentro do meu array
 }
+{
+    /*  STRINGS PARA ARRAYS
+	Agora iremos aprender a transformar uma cadeia de caracteres, ou seja, uma string, onde cada caractere será um elemento do array.
+    */
+    let word = 'manipulação'
+    console.log(Array.from(word)) // Desta forma, a string será dividida em caracteres onde cada um será um elemento do array.
+}
