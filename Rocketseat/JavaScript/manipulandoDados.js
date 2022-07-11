@@ -59,3 +59,15 @@
     let phrase = 'Quero viver o amor'
     console.log(phrase.includes('amor')) //Assim retornará um boolean se contém ou não a palavra
 }
+{
+    /* Manipulando arrays
+
+    Separe um texto que contém espaços, em um novo array onde cada palavra é
+     uma posição do array. Depois disso, transforme o array em texto (string) e onde havia espaços coloque _ (underscore). */
+    
+     let text = 'Estou amando aprender programação!'
+     let myArray = text.split(' ')
+     console.log(myArray)
+     let arrayIsNowString = myArray.join('_')
+     console.log(arrayIsNowString.toLowerCase())
+}
