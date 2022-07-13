@@ -26,3 +26,20 @@ Binary → É binário pois necessito de 2 valores para haver um operador entre 
     let number = new Number(24);
     console.log(typeof name, typeof number);
 }
+{
+   // TYPEOF DELETE
+
+//   Operadores unários
+// typeof →É para me informar o tipo de dado em que estamos trabalhando. Exemplo:
+	let string = 'palavra';
+	console.log(typeof string);
+// delete → Usado quando queremos deletar uma propriedade de um objeto. Exemplo:
+	const person = {
+		name: 'Lucas',
+		age: 26,
+		weight: 98.8,
+};
+console.log(person);
+delete person.weight;
+console.log(person); // Nessa impressão não teremos o weight do objeto
+}
