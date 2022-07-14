@@ -65,3 +65,16 @@ Exemplo:*/	let numero = 6;
 /*Exponencial → É representado pelo ‘**’. É como elevar um número pelo outro. Exemplo:*/	
             console.log(3 ** 2);
 }
+{
+    /* GROUPING OPERATOR
+	Nada mais nada menos que o parênteses ‘()’. Como sabemos na matemática temos ordem de cálculo das expressões. Primeiro raízes e potências, 
+    depois multiplicações e divisões, depois somas e subtrações. No entanto, quando temos parênteses temos em mente que devemos resolver aquele 
+    bloco de cálculo primeiro. No JS a mesma coisa. 
+    Exemplos: 	*/
+        let total1 = 7 + 5 * 2; 
+		console.log(total1); // Esse resultado será 17
+		//Agora com parênteses
+		let total2 = (7 + 5) * 2;
+		console.log(total2); // Esse resultado será 24
+
+}
