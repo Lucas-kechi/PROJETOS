@@ -43,3 +43,25 @@ console.log(person);
 delete person.weight;
 console.log(person); // Nessa impressão não teremos o weight do objeto
 }
+{
+    /*  OPERADORES ARITMÉTICOS
+	São um ou mais caracteres que efetuam algum tipo de cálculo.
+
+Multiplicação → É representado pelo ‘*’ e também pode ser usado em números reais. Exemplo:*/ 	console.log(5.25 * 4);
+/*Divisão → É representado pela ‘/’ e também pode ser usado em números reais.
+Exemplo:*/ 	console.log(21 / 4);
+/*Soma → É representado pelo ‘+’. Exemplo:*/	console.log(5.5 + 5.5);
+/*Subtração → É representado pelo ‘-’. Exemplo:*/	console.log(11 - 5.5);
+
+/*Operadores mais diferenciados:
+O resto da divisão → É representado pelo ‘%’ E nos mostra o que sobra de uma divisão. Exemplo:*/	console.log(11 % 2); //OBS:remainder = resto em inglês.
+/*Incremento → É representado pelo ‘++’. E ele adiciona uma unidade ao valor, Assim se transforma em um novo valor com 1 unidade a mais.
+Exemplo:*/	let numero = 6;
+		    // posso também usar numero++ apenas isso já fará o increment
+		    console.log(++numero); // Assim o novo valor será 7 nessa variável
+/*Decremento → É representado pelo ‘--’.É a mesma ideia do incremento só que agora diminuindo uma unidade.
+ Exemplo:*/	let number = 7;
+		    console.log(--number); 
+/*Exponencial → É representado pelo ‘**’. É como elevar um número pelo outro. Exemplo:*/	
+            console.log(3 ** 2);
+}
