@@ -78,3 +78,18 @@ Exemplo:*/	let numero = 6;
 		console.log(total2); // Esse resultado será 24
 
 }
+{
+//     OPERADORES DE COMPARAÇÃO IGUAL A E DIFERENTE DE
+// 	No JS o sinal de igual, não é igual a e sim recebe. então quando declaramos uma variável e usamos o sinal de igual estamos dizendo que a variável 
+// recebe aquele valor. Dito isto:
+// Igual a → É um operador de comparação, representado por 2 sinais de iguais “==”, que nos responde com um boolean. Exemplo:
+	let number = 2
+	console.log(number == 1); //R: false
+	console.log(number == 2); //R: true 
+	console.log(number == '2'); // Até mesmo uma string com o mesmo caractere pode ser igual a um number então 2 = ‘2’. R: true
+// Diferente de → Seguindo o mesmo conceito de igual a, mas dessa vez é se um valor é diferente de outro, também nos devolve um boolean. 
+// Representado por ‘!=’ .Exemplos:
+	console.log(number != 1); //R: true
+	console.log(number != 2); //R: false
+	console.log(number != '2');	//R: false
+}
