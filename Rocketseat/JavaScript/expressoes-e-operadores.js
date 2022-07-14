@@ -93,3 +93,14 @@ Exemplo:*/	let numero = 6;
 	console.log(number != 2); //R: false
 	console.log(number != '2');	//R: false
 }
+{
+    // OPERADORES DE COMPARAÇÃO ESTRITAMENTE IGUAL E ESTRITAMENTE DIFERENTE
+	// Esses operadores seguem quase a mesma lógica dos de comparação, porém agora além de comparar os valores irá comparar também o tipo de dado. Exemplos:
+    console.log('Agora comparações estritamentes iguais e diferentes')
+	let one = 1;
+	let two = 2;
+    console.log(one === 1); //true, pois os 2 são numbers e os 2 tem os mesmos valores
+    console.log(one === '1'); //false, pois um é uma string e outro é um número
+    console.log(two !== 2); //false, pois os 2 são um number
+	console.log(two !== '2'); //true, pois são diferentes
+}
