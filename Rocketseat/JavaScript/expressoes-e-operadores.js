@@ -174,3 +174,23 @@ Exemplo:*/	let numero = 6;
 //NOT ‘!’ → Esse operador nega o valor da variável, então se tiver true ela virará false e vice versa.
 	console.log(!pao) //Então agora obtenho true no pão, Funciona como um iunterruptor.
 }
+{
+	/*
+	OPERADOR CONDICIONAL TERNÁRIO
+	Dependendo da condição recebemos valores diferentes (parecido com if else)
+	Sintaxe:(condição) então (valor 1) se  não (valor 2)
+	 		condition ? value1 : value2 
+	Logo então, percebemos que se a condição for true teremos o valor 1, se false teremos o valor 2.
+	Exemplo 1: Meu café da manhã somente será top se tiver pão e queijo.	*/
+		console.log('OPERADOR CONDICIONAL TERNÁRIO')
+		let pao = true;
+		let queijo = true;
+	console.log(pao && queijo ? 'Café da manhã TOP' : 'Café da manhã RUIM'); // Temos a condição “pão && queijo”, se o resultado da condição for true a
+	//  mensagem será ‘Café da manhã TOP’, agora se a mensagem for false então a mensagem será ‘Café da manhã RUIM’
+	queijo = false;
+	console.log(pao && queijo ? 'Café da manhã TOP' : 'Café da manhã RUIM')
+	// Exemplo 2: Expressão se pode ou não dirigir
+		let age = 18;
+	const canDrive = age >= 18 ? 'Can drive' : "Can't drive";
+	console.log(canDrive);
+}
