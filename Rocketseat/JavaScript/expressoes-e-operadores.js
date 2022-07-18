@@ -104,3 +104,23 @@ Exemplo:*/	let numero = 6;
     console.log(two !== 2); //false, pois os 2 são um number
 	console.log(two !== '2'); //true, pois são diferentes
 }
+{
+	/*
+	OPERADORES DE OPERAÇÃO MAIOR E MENOR (IGUAL)
+	São operadores de comparação, que nos retornam um boolean.
+	Exemplo: */	let one = 1;
+				let two = 2;
+				console.log('OPERADORES DE OPERAÇÃO MAIOR E MENOR (IGUAL)')
+	// Maior que (>) → 
+		console.log(`${one > 1}  Maior que`);
+		console.log(`${two > 1}  Maior que`);
+	// Maior igual a (>=) →	
+		console.log(`${one >= 2} Maior ou igual a`);
+		console.log(`${two >= 1} Maior ou igual a`);
+	// Menor que (<) →
+		console.log(`${one < 2} Menor que`);
+		console.log (`${two < 1} Menor que`);
+	// Menor igual a (<=) → 
+		console.log(`${one <= 1} Menos ou igual a`);
+		console.log(`${two <= 1} Menos ou igual a`);
+}
