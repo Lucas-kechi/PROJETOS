@@ -194,3 +194,15 @@ Exemplo:*/	let numero = 6;
 	const canDrive = age >= 18 ? 'Can drive' : "Can't drive";
 	console.log(canDrive);
 }
+{
+	/*OPERADORES PARA STRINGS
+	Falaremos sobre 2  operadores aqui que já vimos antes sobre eles
+Comparison (comparação) → É um operador que responde em comparação a uma string, respondendo verdadeiro ou falso. Exemplo:*/
+	console.log('Operadores para strings')
+	console.log('a' == 'a');
+	console.log('a' == 'b');
+// Concatenation (concatenação) → É um operador que retorna a união de duas strings. Exemplos:
+	console.log('lu' + 'cas');
+	let alpha = 'alpha';
+	console.log(alpha + 'bet');
+}
