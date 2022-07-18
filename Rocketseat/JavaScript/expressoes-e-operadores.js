@@ -151,3 +151,26 @@ Exemplo:*/	let numero = 6;
 	x **= 2; // mesmo que x = x ** 2, assim x será 4
 	console.log(x);
 }
+{
+	/* OPERADORES LÓGICOS (logical operators)
+	2 valores booleanos quando verificados retornará uma respostas verdadeira ou falsa
+	Tipos e exemplos:*/
+		console.log('Operadores lógicos')
+	 	let pao;
+		let queijo;
+//and ‘&&’ → Com essa condição os 2 valores deverão ser verdadeiros (true), para que a resposta seja true.
+	pao = true;
+	queijo = true;
+	console.log(pao && queijo); // Assim receberei true, pois os 2 valores eu tenho true
+	pao = false;
+	console .log(pao && queijo); // False pois não tenho pao
+	pao = true;
+	queijo = false;
+	console .log(pao && queijo); // False pois agora não tenho queijo
+// or ‘||’ → Com essa condição apenas um valor deverá ser true para que eu receba true como resposta.
+	console.log(pao || queijo) //lembrando que so temos pao, o resultado será true mesmo assim pois só preciso de um valor agora
+	pao = false
+	console.log(pao || queijo) //False pois não tenho nenhum true
+//NOT ‘!’ → Esse operador nega o valor da variável, então se tiver true ela virará false e vice versa.
+	console.log(!pao) //Então agora obtenho true no pão, Funciona como um iunterruptor.
+}
