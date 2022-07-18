@@ -124,3 +124,30 @@ Exemplo:*/	let numero = 6;
 		console.log(`${one <= 1} Menos ou igual a`);
 		console.log(`${two <= 1} Menos ou igual a`);
 }
+{
+	// OPERADORES DE ATRIBUIÇÃO (Assignment)
+	// Já utilizamos operadores de atribuição diversas vezes. Serve para atribuir valores a nossas variáveis. Exemplos:
+		let x;
+		console.log('OPERADORES DE ATRIBUIÇÃO')
+// Assignment single
+	x = 2;
+	console.log(x);
+// Addition assignment
+	x += 4;	// mesmo que x = x + 1, assim x será 6
+	console.log(x);
+// Subtraction assignment
+	 x -= 1;  // mesmo que x = x - 1, assim x será 5
+	 console.log(x);
+// Multiplication assignment 
+	x *= 2; 	// mesmo que x = x * 2, assim x será 10
+	console.log(x);
+// Division assignment
+	x /= 2;  // mesmo que x = x / 2, assim x será 5
+	console.log(x);
+// Remainder assignment
+	x %= 3; // mesmo que x = x % 1, assim x será 2
+	console.log(x);
+// Exponentiation assignment 
+	x **= 2; // mesmo que x = x ** 2, assim x será 4
+	console.log(x);
+}
