@@ -206,3 +206,42 @@ Comparison (comparação) → É um operador que responde em comparação a uma 
 	let alpha = 'alpha';
 	console.log(alpha + 'bet');
 }
+{
+		/*	FALSY E TRUTHY
+		Vimos em aulas passadas a ideia de type conversion and type coersion, onde o conversion, também conhecido como casting, somos nós operadores
+		 mudando um tipo de dado, e o coersion é o próprio JS mudando o tipo do dado. Relembrando disso entramos no assunto de falsy e truthy, isso se 
+		 aplica quando um valor é considerado falsy ou truthy quando o booleano é obrigatório, por exemplo em condicionais e loops, vamos falar de loops 
+		 mais a frente. 
+	Falsy → Todos os valores que resultará em falsy */
+	console.log("Exemplos de Falsy")
+	// false → boolean false obviamente me dará falsy
+		console.log(false ? "Truthy" : "Falsy");
+	// 0 → number zero, por type coersion
+		console.log(0 ? "Truthy" : "Falsy");
+	// -0 → valor menos 0
+		console.log(-0 ? "Truthy" : "Falsy");
+	// “” → String vazia
+		console.log("" ? "Truthy" : "Falsy");
+	// null → valor nulo
+		console.log(null ? "Truthy" : "Falsy");
+	// undefined - valor indefinido
+		console.log(undefined ? "Truthy" : "Falsy");
+	// NaN - valor not a número
+		console.log(NaN ? "Truthy" : "Falsy");
+	// Truthy → Todos os valores que resultará em truthy
+	console.log("Exemplos de Truthy")
+	// true → Obviamente o boolean true é truthy
+		console.log(true ? "Truthy" : "Falsy");
+	// {} → Um objeto vazio
+		console.log({} ? "Truthy" : "Falsy");
+	// [] → Um array vazio
+		console.log([] ? "Truthy" : "Falsy");
+	// 1 → Número um 
+		console.log(1 ? "Truthy" : "Falsy");
+	// 3.23 → O float number 3.23
+		console.log(3.23 ? "Truthy" : "Falsy");
+	// “0” → Uma string com algo dentro
+		console.log("false" ? "Truthy" : "Falsy");
+	// Infinity - infinito 
+		console.log(Infinity ? "Truthy" : "Falsy");
+}
