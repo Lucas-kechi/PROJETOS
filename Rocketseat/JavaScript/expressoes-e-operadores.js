@@ -245,3 +245,19 @@ Comparison (comparação) → É um operador que responde em comparação a uma 
 	// Infinity - infinito 
 		console.log(Infinity ? "Truthy" : "Falsy");
 }
+{
+	/*
+		PRECEDÊNCIA DOS OPERADORES
+		É a ordem com que a linguagem interpreta os operadores dando preferência para os primeiros operados e menos aos últimos.
+	Grouping → 				( )
+	Negação e incremento →		!  ++  —
+	Multiplicação e divisão → 		*  / 
+	Adição e subtração → 		+  -
+	Relacional →				<  <=  >  >=
+	Igualdade →				==  !=  ===  !==
+	AND →				&&
+	OR →					||
+	Condicional →				? :
+	Assignment (atribuição) →		=  +=  -=  *=  /=  %=  **=
+	*/
+}
