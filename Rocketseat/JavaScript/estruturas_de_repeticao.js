@@ -23,3 +23,17 @@
         console.log(y)
     };
 }
+{
+    /*  WHILE
+ 	Significa enquanto, é também uma estrutura de repetição, porém devemos tomar cuidado para não entrar em loop infinito. Enquanto o parâmetro de while for true 
+    ele repetirá o bloco de código, então para parar as repetições uma hora o parâmetro deve ser false.
+Exemplo:     */
+    let x = 100
+    while(x > 1){
+        x /= 2
+        console.log(x)
+    }
+    // É uma estrutura bem semelhante ao for, então como saberemos qual utilizar? 
+    // Sempre que não sabermos em qual resultado queremos parar vamos utilizar o while, ou seja,a não sei qual resultado eu quero mas sei que tem que
+    // ser menor que algo então usaremos while.
+}
