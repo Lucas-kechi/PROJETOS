@@ -44,3 +44,46 @@
     4 - Tomar cuidado para uma condição não bater com outra, ou seja, ser igual a outra, pois a leitura da aplicação sempre será primeiro o if se true ela não 
     lerá o else.*/
 }
+{
+    /*    SWITCH
+    É uma declaração que posso abrir vários caminhos na minha aplicação. Bastante semelhante a if e else. Porém ela tem uma estrutura diferente.
+    SINTAXE:
+    switch (expressão) {
+        case ‘(resultado da expressão x)’:
+        (Bloco de código se a expressão for x)
+        break (para finalizar um case)
+        case ‘(resultado da expressão y)’
+        (Bloco de código se a expressão for y)
+        break
+        default: 
+        (Bloco de códigos caso a expressão não tenha nenhum dos resultados acima)
+        break
+    };
+    
+    Exemplo de calculadora com switch*/
+        function calculate(number1, operator, number2) {
+            let result = 0;
+            switch (operator) {
+                case '+':
+                    result = number1 + number2
+                    break
+                case '-':
+                    result = number1 - number2
+                    break
+                case '*':
+                    result = number1 * number2
+                    break
+                case '/':
+                    result = number1 / number2
+                    break
+                default:
+                    console.log('Operador ainda não atualizado')
+                    break
+            };
+            return result;
+        };
+    console.log(calculate(5, '-', 3))
+    console.log(calculate(900, '*', 500))
+    console.log(calculate(400, '*', 30))
+    console.log(calculate(5, "**", 2))
+}
