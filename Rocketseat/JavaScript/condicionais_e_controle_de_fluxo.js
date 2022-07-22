@@ -87,3 +87,25 @@
     console.log(calculate(400, '*', 30))
     console.log(calculate(5, "**", 2))
 }
+{
+    /*THROW E TRY/CATCH 
+	Throw que vem do inglês lançar, arremessar. E catch que é pegar. E try é tentar. O sentido é tentar executar um bloco de códigos (try) e se der algum erro ele será disparado (throw), então posso capturar esse erro na minha aplicação (catch).
+    Exemplo:*/
+    // Throw
+        function sayMyName (name = '') {
+            if (name === '') {
+        throw new Error('Nome é Obrigatório') // dessa forma, vamos 'lançar' o erro caso tenha que nesse caso seria o parametro name vazio
+    };
+
+    console.log('Depois do erro');
+    }
+
+    // Try… Catch
+        try {
+            sayMyName() // Aqui usamos o try para tentar rodar a função 
+    } catch(e) {
+        console.log(e) // E aqui é onde o erro foi 'pego' então emprimimos a mensagem de erro mas sem atrapalha a continuidade da aplicação
+    };
+    console.log('Após o try/catch'); // Exemplo que a aplicação continua rodando mesmo após o erro.
+
+}
