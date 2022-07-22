@@ -37,3 +37,19 @@ Exemplo:     */
     // Sempre que não sabermos em qual resultado queremos parar vamos utilizar o while, ou seja,a não sei qual resultado eu quero mas sei que tem que
     // ser menor que algo então usaremos while.
 }
+{
+    /*    FOR OF
+        É uma declaração que irá criar um loop através de alguma variável que já tenhamos.
+    Por exemplo strings e arrays: */
+        //strings
+        let name = 'Lucas';
+        for (let char of name) {
+            console.log(char);
+    };
+    //Arrays
+    let names = ['Felipe', 'Filipe', 'Luciano', 'Leo', 'Iago'];
+    for (let name of names){
+        console.log(name)
+    };
+    // Assim criamos repetições da string e do array, com seu conteúdo.
+}
