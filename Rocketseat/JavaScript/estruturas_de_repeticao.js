@@ -53,3 +53,23 @@ Exemplo:     */
     };
     // Assim criamos repetições da string e do array, com seu conteúdo.
 }
+{
+    /*        FOR IN
+	Enquanto o for of fazia loop em cima de strings e arrays. O for in faz loop em cima de objects, pegando as propriedades do object. 
+    Exemplo:*/
+
+    let person = {
+        name: 'Lucas',
+        age: 26,
+        heigth: 1.79,
+        isDev: true,
+        action: ()=>{
+            return `${person.name} está codando`
+        }
+    };
+    for(let property in person){
+        console.log(property)
+        console.log(person[property])
+        console.log(person.action())
+    };
+}
