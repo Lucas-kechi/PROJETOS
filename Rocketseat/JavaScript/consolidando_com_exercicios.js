@@ -39,4 +39,5 @@
     console.log(getGrade(-10));
     console.log(getGrade(100));
     console.log(getGrade(60));
+    console.log(`Adriana tirou ${getGrade(85)} na sua nota média`)
 }
