@@ -41,3 +41,42 @@
     console.log(getGrade(60));
     console.log(`Adriana tirou ${getGrade(85)} na sua nota média`)
 }
+
+{
+    /*
+    SISTEMA DE GASTOS FAMILIARES
+    Crie um objeto que irá criar 2 propriedades ambas do tipo array:
+    receitas [ ]
+    despesas [ ]
+    Agora, crie uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem se a 
+    família está com saldo negativo ou positivo, seguido do valor do saldo.
+    */
+    // Forma que eu fiz:
+    function familyExpense(income, expense) {
+        const total = {
+            income: income,
+            expense: expense
+        };
+        let incomeTotal = 0;
+        let expenseTotal = 0;
+
+        for(let index = 0; index <= income.length -1; index++) {
+            incomeTotal += income[index];
+        };
+        for(let index = 0; index <= expense.length -1; index++) {
+            expenseTotal += expense[index];
+        }
+
+        if(incomeTotal > expenseTotal) {
+            console.log(`Seu saldo é positivo ${incomeTotal - expenseTotal}.`);
+        } else if(incomeTotal < expenseTotal) {
+            console.log(`Seu saldo é negativo ${incomeTotal - expenseTotal}.`);
+        } else {
+            console.log(`Seu saldo esta zerado.`);
+        }
+    }
+    familyExpense([1600, 100, 2687], [690, 97, 500, 2600, 500])
+    familyExpense([1600, 100], [690, 97, 500, 2600, 500])
+    familyExpense([1600, 100, 3250], [690, 97, 500, 2600, 500])
+
+}
