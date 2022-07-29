@@ -80,3 +80,143 @@
     familyExpense([1600, 100, 3250], [690, 97, 500, 2600, 500])
 
 }
+
+{
+    /*
+        CELSIUS TO FAHRENHEIT
+        Crie uma função que receba um string em celsius ou fahrenheit e faça uma transformação de uma unidade para outra
+    C = (F - 32) * 5/9.
+    F = C * 9/5 + 32.
+    */
+    // Maneira que eu fiz:
+    function celsiusToFahrenheit(string) {
+        let fahrenheit;
+        let celsius;
+        let stringToArray = string.split(' ');
+        
+       
+        console.log(celsius)
+        for(let char of stringToArray) {
+            if(char == 'ºC' || char == 'celsius') {
+                celsius = stringToArray[0];
+                const fahrenheitConvertion = celsius * 9 / 5 + 32;
+
+                console.log(`${string} é ${fahrenheitConvertion.toFixed(2)} fahrenheit.`);
+            } else if (char == 'ºF' || char == 'fahrenheit') {
+                fahrenheit = stringToArray[0];
+                const celsiusConvertion = (fahrenheit - 32) * 5/9;
+
+                console.log(`${string} é ${celsiusConvertion.toFixed(2)} celsius.`);
+            }
+        }
+
+    }
+    celsiusToFahrenheit('52 ºF')
+}
+
+{
+    /* 
+    ∞ Buscando e contando dados em Arrays ∞
+    Baseado no Array de Livros por Categoria abaixo, faça os seguintes desafios
+        • Contar o número de categorias e o número de livros em cada categoria
+        • Contar o número de autores
+        • Mostrar livros do autor Augusto Cury
+        • Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
+    */
+
+    const booksByCategory = [
+        {
+            category: "Riqueza",
+            books: [
+                {
+                    title: "Os segredos da mente milionária",
+                    author: "T. Harv Eker",
+                },
+                {
+                    title: "O homem mais rico da Babilônia",
+                    author: "George S. Clason",
+                },
+                {
+                    title: "Pai rico, pai pobre",
+                    author: "Robert T. Kiyosaki e Sharon L. Lechter",
+                },
+            ],
+        },
+        {
+            category: "Inteligência Emocional",
+            books: [
+                {
+                    title: "Você é Insubstituível",
+                    author: "Augusto Cury",
+                },
+                {
+                    title: "Ansiedade – Como enfrentar o mal do século",
+                    author: "Augusto Cury",
+                },
+                {
+                    title: "Os 7 hábitos das pessoas altamente eficazes",
+                    author: "Stephen R. Covey",
+                },
+            ],
+        },
+    ];
+    
+    // Primeiro quesito • Contar o número de categorias e o número de livros em cada categoria
+    {
+        let categoryCount = 0
+        categoryCount += booksByCategory.length;
+        console.log(`O número de categorias é ${categoryCount}.`);
+        
+        let booksCountFirstCategory = 0
+        booksCountFirstCategory += booksByCategory[0].books.length;
+        console.log(`Tem ${booksCountFirstCategory} livros na primeira categória.`);
+
+        let booksCountSecondCategory = 0;
+        booksCountSecondCategory += booksByCategory[1].books.length;
+        console.log(`Tem ${booksCountSecondCategory} livros na segunda categória.`);
+
+        console.log(`Total de livros é ${booksCountFirstCategory + booksCountSecondCategory}`);
+
+        let booksTotal = 0;
+        for(let index = 0; index <= booksByCategory.length -1; index++) {
+            booksTotal += booksByCategory[index].books.length;
+        }
+        console.log(`Podemos também utilizar um for criando uma repetição então sempre teremos o total de livro que agora é ${booksTotal}.`)
+    }
+    // Segundo quesito  • Contar o número de autores
+    {
+        let authorNumbers = 0;
+        let authorRepeat = 0;
+        let authorArrays = [];
+        
+        for(let index = 0; index <= booksByCategory.length - 1; index++) {
+            authorNumbers += booksByCategory[index].books.length;
+    
+            for(let books of booksByCategory[index].books) {
+                authorArrays.push(books.author)
+            }
+        }
+
+        for(let index = 0; index <= authorArrays.length - 1; index++) {
+            let repeat = 0;
+
+            for(let author of authorArrays) {
+                if(author == authorArrays[index]) {
+                    repeat++;
+                }
+            }
+
+            if(repeat === 2){
+                authorRepeat++;
+            }
+
+            authorArrays[index] = 'ok';
+        }
+        
+        console.log(`Neste array tem ${authorNumbers - authorRepeat} autores.`)
+    }
+    // Terceiro e quarto quesito • Mostrar livros do autor Augusto Cury • Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
+    {
+
+    }
+}
