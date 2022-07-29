@@ -217,6 +217,30 @@
     }
     // Terceiro e quarto quesito • Mostrar livros do autor Augusto Cury • Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
     {
+        function booksWriteFor(author){
+            let booksArray = [];
+            
+            for(let index = 0; index <= booksByCategory.length - 1; index++) {
+                
+                for(let books of booksByCategory[index].books) {
+                    if(books.author == author) {
+                        booksArray.push(books.title);
+                    }
+                }
 
+            }
+
+            if(booksArray.length === 1){
+                console.log(`Nesta biblioteca temos apenas o livro "${booksArray[0]}" escrito por (${author}).`);
+            } else if(booksArray.length > 1) {
+                console.log(`Nesta biblioteca temos os livros "${booksArray.join('" e "')}" escritos por (${author}).`);
+            } else {
+                console.log(`Nao temos nenhum livro nesta biblioteca escrito por ${author}.`);
+            }
+        }
+
+        booksWriteFor("Augusto Cury");
+        booksWriteFor("Stephen R. Covey");
+        booksWriteFor("João das Neves");
     }
 }
