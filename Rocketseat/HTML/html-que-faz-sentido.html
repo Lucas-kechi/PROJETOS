@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de HTML semântico, HTML5</title>
+</head>
+<body>
+    <!-- HTML QUE FAZ SENTIDO PARA TODOS
+1.1 ABERTURA
+	Aqui veremos a aplicação da semântica no html. Conhecendo o HTML semântico.
+
+1.2 WEB SEM NTICA
+O que é?
+Significa adicionar significado à uma linguagem. No caso do HTML é no caso o conteúdo.
+
+
+Então a web semântica vai controlar e organizar a apresentação do nosso conteúdo
+Cada site é único, entretanto, existem padrões ou convenções, que nós identificamos intencionalmente ou não intencionalmente.
+Exemplo: Na maioria dos casos que entramos em uma página ou site, temos uma estrutura que já identificamos, no topo geralmente o título abaixo um menu de navegação e a direita um operador de busca, esses exemplos são de uma página com uma boa semântica.
+
+
+Ao usar uma marcação semântica consistente, para identificar os elementos da página, nós ajudamos o user agent a identificar corretamente os elementos e apresentá-los aos visitantes da página. User agent === browser === navegador.
+
+
+Isso se torna extremamente importante para acessibilidade
+
+1.3 IMPORT NCIA DAS TAGS HTML SEM NTICAS
+As tags 
+Elas que irão ajudar a criar um HTML semântico, pois, algumas tags têm significados específicos e orientações claras sobre onde devem ficar na página e o motivo dela existir.
+
+
+Exemplo: -->
+<p>
+    Nós (programadores), somos pagos para resolver problemas, não para memorizar soluções.
+	─ Mayk Brito
+</p>
+
+<!-- Com uma melhor semântica, aplicamos <blockquote> para abrir uma citação e <cite> para citar quem fez a citação. -->
+
+<blockquote>
+    Nós (programadores), somos pagos para resolver problemas, não para memorizar soluções.
+	<cite>	─ Mayk Brito </cite>
+</blockquote>
+
+
+<!-- Entendendo os significados
+Como autor da página é sua responsabilidade entender os significados dos elementos.
+Muitas vezes é simples pois o HTML não possui um leque gigante de elementos.
+Algumas vezes é bem complexo entender alguns elementos.
+
+SAIBA QUE: Alguns elementos, você irá utilizar em todos os documentos que você criar, e alguns, talvez você nunca precise utilizar.
+	O HTML5 então vem com o foco de melhorar a semântica dos seus códigos HTML. -->
+
+    <!-- 1.4 SEÇÕES COMUNS
+	Seções comuns em documentos HTML
+Cabeçalho <header>
+	É o topo dos sites, páginas e apps. Que geralmente vem uma logo, um menu de navegação ou um título, um campo de pesquisa, entre outras coisas.
+navegação <nav>
+	É um menu que leva links para seções do site, então me permite ter uma interação melhor.
+Conteúdo principal <main> 
+	É o conteúdo principal do meu HTML. Geralmente fica ao centro da página. Onde teremos vários artigos, falando sobre o conteúdo que desejo apresentar.
+Barra lateral <aside>
+	É uma barra lateral que geralmente vem ao lado do conteúdo principal. Onde podemos por coisas como anúncios, informações do autor da página, conteúdos relacionados com links.
+Rodapé <footer> 
+	É a parte inferior da página.  -->
+    
+    <!-- 1.5 HEADER
+	É um elemento estrutural e semântico. Estrutural pois ele fará parte da estrutura da página e semântico pois ele tem valor semântico.
+	SINTAXE: <header> (conteúdo) </header>
+Onde utilizar?
+Quando no início da página, é visto como global 
+pode ser usado em outros elementos semânticos, como <article>, <section>. Então quando usando dentro da seção então é um header da seção.
+header dentro de header ou footer?
+	Não podemos fazer isso, senão já perdemos a semântica do header.
+
+
+Múltiplos headers 
+	Podemos utilizar diversos headers, contanto que tenha a ideia que o header é o cabeçalho de alguma coisa, seja global, ou do article e até mesmo do section.
+
+
+Não possui atributos específicos, apenas atributos globais. -->
+
+
+
+<!-- 1.6 NAV
+	SINTAXE: <nav> (conteúdo, geralmente li) </nav>
+Onde e por que utilizar?
+	Geralmente usados no header global, se não pode vir também no aside. Se já houver um menu de navegação do header podemos fazer uma navegação no footer por exemplo, porém sem a tag <nav>. Pois a tag é utilizada para navegações principais da página. -->
+
+        <!-- 1.7 MAIN
+	sintaxe: <main> (uma 'pá' de conteúdo) </main>
+	É uma tag para conteúdo único da página, então usaremos ela apenas uma vez por página. Leva todo conteúdo da página que deseja apresentar. Então ela fica no ‘scope’ do <body>. E dentro delas também temos outras tags semânticas que podemos utilizar, para separar de uma melhor maneira todo o conteúdo. -->
+
+<!-- 1.8 ARTICLE 
+	sintaxe:  <article> (conteúdo) </article>
+	Somente atributos globais.
+	Então o article, geralmente dentro do <main>, são blocos de conteúdos independentes, ou seja, mesmo que retire esse article da página e leia somente ele, ele deve fazer sentido. E todos os articles dentro do main devem abordar um assunto título da página. -->
+
+<!-- 1.9 ASIDE
+	sintaxe: <aside> (conteúdo) 
+	Somente atributos globais.
+São conteúdos levementes relacionados ao conteúdo principal
+Explicações
+Glossários
+Links extras 
+Biografia do autor
+Informações de perfil 
+Curiosidades -->
+
+<!-- 1.10 FOOTER
+	sintaxe: <footer> (conteúdo) </footer> 
+	Somente atributos globais.
+Geralmente vem ao final da página, e entra conteúdos como:
+Informações do autor da página
+Se a página tem direitos contra cópia, Copyright©
+Contatos dos donos da página
+Sitemap links sobre o sistema de navegação da página
+Um voltar ao topo -->
+
+
+
+<!-- 1.11 SECTION
+	sintaxe: <section> (conteúdo) </section>
+	Somente atributos globais.
+É uma tag que pode substituir a tag <div>, pois ela é uma tag semântica, geralmente vem acompanhada de um título <h2> ou <h3>. Lembrando que para uma melhor semântica deve se usar articles e sections dentro de articles.
+
+1.12 ELEMENTOS GENÉRICOS NÃO SEM NTICOS
+Elementos não semânticos para uso genérico
+<div> </div> → 
+	Usado se não conseguir achar um elemento de bloco semântico. Tem seu display block. Então podemos pensar que é para criar caixas onde poderemos depois utilizar essas caixas como quisermos.
+<span> </span> →
+	Já o span tem a mesma utilização da div, porém seu display é inline, ou seja, posso pegar somente um conteúdo específico na linha jogar ele dentro de um span, e depois trabalhar somente com ele, sem que atrapalhe o display da minha página. -->
+
+</body>
+</html>
