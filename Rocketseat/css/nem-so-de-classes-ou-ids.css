@@ -121,3 +121,18 @@ Pseudo-classes começam com 2 pontos, seguido do nome da pseudo class.
 }
 /* OBS: Nesse caso a cor vermelha somente será aplicada se o primeiro filho de ul for um li, se for uma outra tag então não existirá
  um li como first child então não se aplicará. */
+
+
+/* 2.3 NTH-OF-TYPE
+	É um pseudo-classe que me permite selecionar o elemento que quero dentro dos filhos de um elemento, usando entre parênteses, o número do respectivo elemento.
+Exemplo: 
+<article>
+	<h2>Título</h2>
+	<p>1º parágrafo</p>
+	<p>2º parágrafo</p>
+	<p>3º parágrafo</p>
+</article> 
+``` css ``` */
+article p:nth-of-type(2){
+	color: violet; /* Assim estou dizendo que quero a cor violeta no segundo parágrafo do meu article. Então dentro do parênteses posso selecionar o número do elemento, que neste caso são os ‘p’. */
+}
