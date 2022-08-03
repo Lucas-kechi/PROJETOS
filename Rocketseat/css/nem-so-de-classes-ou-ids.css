@@ -195,4 +195,24 @@ Exemplo:
 		border-color: green;
 	} /* Então nossa entrada de texto quando estiver em foco terá sua borda verde. */
 
-    
+
+    /* 2.7 DISABLED E REQUIRED 
+	Agora pseudo-classes de atributos, no caso o disabled e o required.
+Exemplos:
+
+Disabled
+		HTML
+	<input type=”text” disabled>
+		CSS */
+	input:disabled {
+		background-color: green;
+	} /* Então nossa entrada de texto quando estiver desabilitada terá sua cor de fundo verde, se não estiver não terá essa propriedade, 
+    é um boolean se true aplicar se false não aplica */
+
+/* Required
+		HTML
+	<input type=”text” required>
+		CSS */
+	input:focus {
+		border-color: red;
+	} /* Então nossa entrada de texto quando estiver requerida, ou seja, obrigatória, terá sua borda vermelha. */
