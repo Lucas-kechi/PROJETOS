@@ -57,3 +57,13 @@ Exemplo:*/
         color: red; /* Então aqui quero aplicar a cor vermelha no elemento h2 que está em article que, por sua vez, está no body */
     }
 /* OBS: Então a regra se aplicará para todos h2 dentro de article mesmo que haja outras tags entre o h2 e o article. */
+
+
+/*    1.4 CHILD COMBINATOR 
+É identificado pelo sinal ‘ > ’ entre dois seletores
+Seleciona somente o elemento que é filho direto do pai
+Elementos depois do filho direto são desconsiderados 
+Exemplo:*/
+body > ul > li {
+	color: blue; /* Então agora só receberá a cor azul os filhos direto, então se houver tags entre eles a propriedade não será aplicada. */
+}
