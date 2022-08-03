@@ -67,3 +67,29 @@ Exemplo:*/
 body > ul > li {
 	color: blue; /* Então agora só receberá a cor azul os filhos direto, então se houver tags entre eles a propriedade não será aplicada. */
 }
+
+
+/*  1.5 SIBLING COMBINATOR 
+Adjacent Sibling Combinator
+Identificado pelo sinal de ‘ + ‘ entre dois elementos
+Seleciona somente o elemento irmão direto na hierarquia e estritamente o irmão seguinte somente.
+Exemplo: 
+<h1>Título</h1>
+<p>1º parágrafo</p>
+<p>2º parágrafo</p> 
+``` CSS ```  */
+h1 + p {
+	color: red;
+} /* Então somente o primeiro parágrafo terá a cor vermelha, pois seleciona somente o irmão direto seguinte. */
+
+/* General Sibling Combinator 
+Identificado pelo sinal ‘ ~ ‘ entre dois valores
+Seleciona todos elementos irmãos.
+Exemplo:
+<h1>Título</h1>
+<p>1º parágrafo</p>
+<p>2º parágrafo</p> 
+´´´CSS´´´ */
+h1 ~ p {
+	color: red;
+} /*Então agora os 2 parágrafos terão a cor vermelha pois seleciona todos os irmãos */
