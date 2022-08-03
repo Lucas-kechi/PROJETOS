@@ -216,3 +216,51 @@ Disabled
 	input:focus {
 		border-color: red;
 	} /* Então nossa entrada de texto quando estiver requerida, ou seja, obrigatória, terá sua borda vermelha. */
+
+
+    /* 2.8 COMO CONSEGUIR AJUDA
+	Um link para ver mais pseudo-classes 
+Referência: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+
+
+/* 3 PSEUDO-ELEMENTS
+3.1 PSEUDO-ELEMENTS
+	Com pseudo-elements posso aplicar no meu HTMl pelo próprio CSS
+sintaxe: ` ::pseudo-element-name `.
+					HTML
+<ul>
+	<li>Alegria</li>
+	<li>Amor</li>
+	<li>Felicidade</li>
+	<li>Euforia</li>
+</ul>
+Before →
+	Com isso, posso criar um conteúdo no meu HTML antes do conteúdo já existente. Exemplo: */
+ul li::before {
+	content: "sentimento";
+} /* Então antes de cada li, receberá a palavra sentimento. obs: necessário ter content mesmo que vazio */
+
+
+/* After →
+	Com isso, posso criar um conteúdo no meu HTML após o conteúdo já existente. Exemplo: */
+ul li::after{
+	content: ";";
+} /* Então após cada li, receberá ponto e vírgula.  obs: necessário ter content mesmo que vazio  */
+
+
+/* First-line →
+	Agora as property serão aplicadas somente na primeira linha do elemento. Quando estivermos falando de um parágrafo.
+Exemplo:
+			HTML
+<p>
+Nada pode ferir-nos depois de morrermos, ou assim nos disseram. Lembre-se de que há três coisas que todo sábio deve temer: o mar na tormenta, 
+uma noite sem luar e a ira de um homem gentil. É como se todo mundo contasse uma história sobre si mesmo dentro da própria cabeça.
+</p>
+			CSS */
+p::first-line {
+	font-weight: bold;
+} /* Então pegará somente a primeira linha do meu parágrafo e deixará ela em negrito. */
+
+
+/* Referência para estudo de pseudo-elements
+	https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements */
