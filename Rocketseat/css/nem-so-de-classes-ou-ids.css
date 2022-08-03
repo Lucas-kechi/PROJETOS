@@ -93,3 +93,13 @@ Exemplo:
 h1 ~ p {
 	color: red;
 } /*Então agora os 2 parágrafos terão a cor vermelha pois seleciona todos os irmãos */
+
+
+/* 1.6 UTILIZANDO COMBINATORS
+	Então agora podemos utilizar os combinadores de diversas formas;
+
+ul > li[class=”red”] → desta forma estou destacando todos os li que estão dentro de ul porém somente os que possuem a classe red.
+
+DICAS: Seletores muito específicos tendem a dificultar o reuso das regras de estilização dos elementos. Muitas vezes, um simples 
+uso de classe torna o trabalho muito mais eficiente. Podemos utilizar o exemplo acima que apenas criando um classe com a propriedade 
+css color: red, já atenderia o caso. */
