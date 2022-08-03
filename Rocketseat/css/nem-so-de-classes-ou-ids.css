@@ -1,0 +1,47 @@
+/* 1 SELECTORS AND COMBINATORS
+1.1 INTRODUÇÃO
+	Veremos neste curso como funcionam os combinadores e os seletores do CSS. Além de ver como usar pseudo-classes e pseudo-elements.
+
+1.2 SELETORES
+
+	Seletores é a conexão entre um elemento HTML e o CSS a fim de alterar o elemento, e temos diversos tipos de seletores.
+Element selector (seletores de elementos) →
+São as tags do HTML, então podemos atribuir um design aquela tag. Exemplo:  */
+    h1 {
+	    color: red;
+	}
+
+    /* ID Selector (seletores de id) →
+São seletores por meio do ID, um atributo global do HTML, que colocamos uma identificação na tag. Representamos os seletores de 
+id com uma ‘#’ antes do ID. Exemplo:*/
+   	#title { 
+       background-color: blue;
+	}
+        
+    /* Class selector (seletores de classe) →
+São seletores por meio de classes, um atributo global do HTML, que colocamos uma classe nas tags. Lembrando que a diferença entre 
+ID e classe é que ID estou me referindo a uma tag específica e classe a uma classe de várias tags. Os seletores de classes são representados 
+com um ‘.’ antes da classe. Exemplo: */
+	.subtitles {
+	    font-weight: 400px;
+	}
+
+    /* Attribute selector  (seletores de atributos) →
+São seletores por meio dos atributos das tags, ou seja, todas as tags que tiverem este atributo específico terão as propriedades atribuídas. 
+São representados por colchetes ‘[ ]’ entre o atributo. Exemplo: */
+	[type] {
+	    font-size: 2.5vh;
+	}
+
+    /* Pseudo-class selector (seletores de pseudo-classes) →
+São elementos que têm um estado específico. Trabalharemos melhor os estados mais a frente neste curso. Mas agora nesse exemplo vamos usar o 
+estado hover em um elementos, que é o estado de quando passamos o mouse por cima do conteúdo. Exemplo:  */
+	p:hover { /* Observem que estou aplicando o estado hover ao elemento p */
+	    color: red;
+	}
+
+    /* Temos também a opção de realizar múltiplas seleções, assim podemos selecionar múltiplos elementos e aplicar uma regra CSS a eles. 
+E usamos uma separação por vírgula ‘,’ para isso. Exemplo: */
+	h1, p, a{
+	    color:red;
+    }
