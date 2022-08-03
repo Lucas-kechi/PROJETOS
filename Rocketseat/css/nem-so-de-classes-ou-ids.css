@@ -45,3 +45,15 @@ E usamos uma separação por vírgula ‘,’ para isso. Exemplo: */
 	h1, p, a{
 	    color:red;
     }
+
+
+/*    1.3 COMBINATORS 
+	Combinadores, pois eles trabalham para buscar e combinar seletores a fim de aplicar uma estilização.
+Descendant combinator →
+É identificado com espaços entre os seletores.
+Busca um elemento dentro de outro
+Exemplo:*/
+    body article h2{
+        color: red; /* Então aqui quero aplicar a cor vermelha no elemento h2 que está em article que, por sua vez, está no body */
+    }
+/* OBS: Então a regra se aplicará para todos h2 dentro de article mesmo que haja outras tags entre o h2 e o article. */
