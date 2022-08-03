@@ -145,3 +145,30 @@ article p:nth-of-type(2){
 	article:nth-child(1){
 		background-color: pink;
 	}
+
+
+     /* 2.5 NTH-CHILD ODD E EVEN
+Even = pares.
+Odd = ímpares.
+Então com odd e even posso selecionar somente os filhos pares ou somente os filhos ímpares. Exemplo: */
+       
+    /* HTML
+<ul>
+    <li>Gratidão</li>   impar
+    <li>Esperança</li>  par
+    <li>Fé</li>         impar
+    <li>Liberdade</li>  par
+    <li>Gratidão</li>   impar
+    <li>Esperança</li>  par
+    <li>Fé</li>         impar
+    <li>Liberdade</li>  par
+</ul>
+
+    CSS */
+ul:nth-child(even){
+    background-color: gray;
+}
+ul:nth-child(odd) {
+    color: gray;
+}
+    
