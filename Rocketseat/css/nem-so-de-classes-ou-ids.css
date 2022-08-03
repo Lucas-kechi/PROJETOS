@@ -171,4 +171,28 @@ ul:nth-child(even){
 ul:nth-child(odd) {
     color: gray;
 }
+
+
+    /* 2.6 HOVER E FOCUS
+Agora falaremos sobre ações do usuário com pseudo-classes 
+
+:hover → Quando o mouse em cima do conteúdo então aplico algumas property-value. 
+Exemplo:
+		HTML
+	<a href=”http://linkaqui.com”>Clique Aqui</a>
+		CSS */
+	a:hover { 
+		color: red;
+	} /* Ou seja, quando meu mouse passar pelo link ele ficará vermelho então as propriedades com o hover
+     só serão aplicadas se o mouse passar por cima do conteúdo. */
+
+/* :focus → Quando, por exemplo, um tag de entrada de texto input estiver em foco a property-value será aplicada.
+Exemplo:
+		HTML
+	<input type=”text”>
+		CSS */
+	input:focus {
+		border-color: green;
+	} /* Então nossa entrada de texto quando estiver em foco terá sua borda verde. */
+
     
