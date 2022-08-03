@@ -112,3 +112,12 @@ css color: red, já atenderia o caso. */
 Exemplos: É o primeiro elemento dentro de uma caixa, ou, o elementos está com o ponteiro do mouse em cima dele.
 Pseudo-classes começam com 2 pontos, seguido do nome da pseudo class.
 `: pseudo-class-name` Sempre em um seletor prévio. */
+
+
+/* 2.2 FIRST-CHILD
+	Um pseudo-classe que se aplicará somente ao primeiro filho. Exemplo: */
+		ul li:first-child {
+			color: blue;
+}
+/* OBS: Nesse caso a cor vermelha somente será aplicada se o primeiro filho de ul for um li, se for uma outra tag então não existirá
+ um li como first child então não se aplicará. */
