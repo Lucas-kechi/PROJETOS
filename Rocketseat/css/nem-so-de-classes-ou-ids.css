@@ -134,5 +134,14 @@ Exemplo:
 </article> 
 ``` css ``` */
 article p:nth-of-type(2){
-	color: violet; /* Assim estou dizendo que quero a cor violeta no segundo parágrafo do meu article. Então dentro do parênteses posso selecionar o número do elemento, que neste caso são os ‘p’. */
+	color: violet; /* Assim estou dizendo que quero a cor violeta no segundo parágrafo do meu article. Então dentro do parênteses posso selecionar o número 
+    do elemento, que neste caso são os ‘p’. */
 }
+
+
+/* 2.4 NTH-CHILD
+	Bem semelhante ao nth-of-type, pois agora estamos falando de todos os filhos do elemento principal, usando o mesmo exemplo acima, o article 
+    tem 4 filhos sendo o h2 o primeiro, então posso selecionar o filho que quiser dentro do parentes. Exemplo */
+	article:nth-child(1){
+		background-color: pink;
+	}
