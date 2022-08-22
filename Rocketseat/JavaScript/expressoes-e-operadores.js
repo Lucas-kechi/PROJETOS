@@ -228,7 +228,8 @@ Comparison (comparação) → É um operador que responde em comparação a uma 
 		console.log(undefined ? "Truthy" : "Falsy");
 	// NaN - valor not a número
 		console.log(NaN ? "Truthy" : "Falsy");
-	// Truthy → Todos os valores que resultará em truthy
+	
+		// Truthy → Todos os valores que resultará em truthy
 	console.log("Exemplos de Truthy")
 	// true → Obviamente o boolean true é truthy
 		console.log(true ? "Truthy" : "Falsy");
