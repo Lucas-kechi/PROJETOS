@@ -53,3 +53,13 @@
     // Removendo atributos
     headerId.removeAttribute('id');
 }
+{   // MANIPULANDO ESTILOS E CLASSES
+    // Style
+    const body = document.querySelector('body');
+    body.style.fontFamily = 'sans-serif'
+    // classList
+    body.classList.add('active', 'green');
+    console.log(body.classList);
+    body.classList.remove('green');
+    body.classList.toggle('active')
+}
