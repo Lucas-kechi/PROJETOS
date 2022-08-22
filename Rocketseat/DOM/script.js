@@ -61,5 +61,5 @@
     body.classList.add('active', 'green');
     console.log(body.classList);
     body.classList.remove('green');
-    body.classList.toggle('active')
+    body.classList.toggle('active');
 }
