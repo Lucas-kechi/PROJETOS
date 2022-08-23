@@ -91,6 +91,29 @@
     console.log(el.previousSibling);
     console.log(el.previousElementSibling);
 }
-{   //CRIANDO E ADICIONANDO ELEMENTOS NA PÁGINA
+{   // CRIANDO E ADICIONANDO ELEMENTOS NA PÁGINA
+    //createElement
+    const divAppend = document.createElement('div');
+    const divPrepend = document.createElement('div');
+
+    divAppend.innerText = "Sou uma div criada com creatElement e inserida no body do HTML com append";
+    divPrepend.innerText = "Sou uma div criada com creatElement e inserida no body do HTML com prepend";
+    //prepend and append
+    const body = document.querySelector('body');
     
+    body.prepend(divPrepend);
+    body.append(divAppend);
+
+    // insertBefore
+    const divBefore = document.createElement('div');
+    const main = body.querySelector('main');
+    
+    divBefore.innerText = "Sou uma div criada com creatElement e inserida no body do HTML com insertBefore";
+    body.insertBefore(divBefore, main);
+    // simulando um insertAfter
+    const header = body.querySelector('header');
+    body.insertBefore(div, header.nextElementSibling);
+}
+{   // EVENTOS
+
 }
