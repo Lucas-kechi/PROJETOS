@@ -112,8 +112,47 @@
     body.insertBefore(divBefore, main);
     // simulando um insertAfter
     const header = body.querySelector('header');
-    body.insertBefore(div, header.nextElementSibling);
+    body.insertBefore(divBefore, header.nextElementSibling);
 }
 {   // EVENTOS
+  /*ADICIONANDO EVENTOS VIA HTML
+	Eventos são a grande sacada do DOM, eventos são interações do usuário que dispara uma função no meu script. E temos diversos tipos de eventos 
+    como click, double click, arrastar, passar o mouse em cima, etc. E adicionamos o evento via HTML em um atributo do elemento, basta usar o prefixo 
+    ‘on’ em seguida vem o nome do evento que queremos, e o valor é a função que quero rodar no meu script. Então toda vez que esse evento for cumprido 
+    a função roda.
+    Exemplo
+    ```HTML```
+    <h1 ondblclick=”doubleClick()”>My Title</h1>
+    ```JavaScript```
+    function doubleClick() {
+        console.log(‘Um evento foi acionado’);
+    };*/
+    // EVENTOS DE TECLADO
+    const input = document.querySelector('input');
 
+    input.onkeydown = function() {
+        console.log('tecla para baixo');
+    };
+    input.onkeyup = () => {
+        console.log('tecla para cima');
+    };
+    // e temos também onkeypress que é toda vez que a tecla esta sendo pressionada
+
+    // ADICIONANDO EVENTOS VIA JS
+    const h1 = document.querySelector('h1');
+    h1.addEventListener('dblclick', eventDblClick);
+
+    function eventDblClick() {
+        console.log('evento criado no JS');
+    };
+
+    // ADICIONANDO EVENTOS VIA JS (OUTRO MÉTODO)
+    /*É o método usado no 'EVENTOS DE TECLADO'. A diferença dos métodos é que usando o prefixo ‘on’ e o nome do evento, não podemos usar o mesmo evento no mesmo 
+    elemento com outra função, pois o JS irá ler apenas o último ‘on’. Já com a função ‘addEventListener()’ podemos adicionar quantas funções, com o 
+    mesmo evento e o mesmo elemento, que quisermos, que será executada todas as funções. */
+
+    //ARGUMENTO event
+    input.onkeydown = function(event) {
+        console.log(event.currentTarget.value)
+    };
 }
