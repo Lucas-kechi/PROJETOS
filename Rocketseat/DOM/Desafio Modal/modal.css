@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    color: white;
+    background-color: purple;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.settingsDiv{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settingsDivSon{
+    height: 3%;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.invisible{
+    display: none;  
+}

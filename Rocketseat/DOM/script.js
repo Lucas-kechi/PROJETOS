@@ -156,3 +156,7 @@
         console.log(event.currentTarget.value)
     };
 }
+{   // PRATICANDO
+    // DESAFIO MODAL
+    
+}
