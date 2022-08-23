@@ -63,3 +63,34 @@
     body.classList.remove('green');
     body.classList.toggle('active');
 }
+{   // NAVEGANDO PELOS ELEMENTOS 
+    //parentElement and parentNode
+    const body = document.querySelector('body');
+    console.log('Elemento pai do body por parentElement');
+    console.log(body.parentElement);
+    console.log('Elemento pai do body por parentNode');
+    console.log(body.parentNode);
+
+    // PEGANDO ELEMENTOS FILHOS
+    //childNodes and children
+    console.log(body.childNodes);
+    console.log(body.children);
+    //firstChild and firstElementChild
+    console.log(body.firstChild);
+    console.log(body.firstElementChild);
+    //lastChild and lastElementChild
+    console.log(body.lastChild);
+    console.log(body.lastElementChild);
+
+    // BUSCANDO IRMÃOS
+    const el = document.querySelector('main p')
+    //nextSibling and nextElementSibling
+    console.log(el.nextSibling);
+    console.log(el.nextElementSibling);
+    //previousSibling and previousElementSibling
+    console.log(el.previousSibling);
+    console.log(el.previousElementSibling);
+}
+{   //CRIANDO E ADICIONANDO ELEMENTOS NA PÁGINA
+    
+}
