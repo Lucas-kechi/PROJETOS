@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de login</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main class="main">
+        <section id="logoSection">
+            <img src="https://1884403144.rsc.cdn77.org/foto/riot-games-league-of-legends/Zml0LWluLzEwNTB4OTk5OS9maWx0ZXJzOnF1YWxpdHkoODUpOm5vX3Vwc2NhbGUoKS9pbWc/7515935.jpg?v=0&st=IuGXdBBkekGWhYte34lZd1PtViKFFYYz5KTCckdOSwU&ts=1600812000&e=0" alt="Logo riotgames" width="25%">
+        </section>
+        <section id="formSection">
+            <h5>Fazer login</h5>
+            <form action="" method="post" id="formLogin">
+               
+                  <input type="text" placeholder="nome de usuário" name="userName" required>
+                  <input type="password" placeholder="senha" name="userPassword" required>
+
+                  <div>
+                    <button id="facebookButton" type="submit"><a target="_blank" href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDf8wWbHlVKlY_ZkqGAJtqc4Rq2BK0QR6KPC79fRobIUUu6uhy4s4c5jEw5pynTVHbp0&usqp=CAU" alt="logo facebook" width="30vh"></a></button>
+                    <button id="googleButton" type="submit"><a target="_blank" href=""><img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/imagem-google-logo-com-fundo-transparente-1.png" alt="logo google" width="30vh"></a></button>
+                    <button id="appleButton" type="submit"><a target="_blank" href=""><img src="https://developer.apple.com/design/human-interface-guidelines/technologies/sign-in-with-apple/images/logo-masked-circle_2x.png" alt="logo apple" width="55vh"></a></button>
+                  </div>
+                  
+                  <label><input type="checkbox" id="checkbox">Manter Login</label>
+                
+            </form>
+           
+        </section>
+        <section id="footer">
+            <button form="formLogin" type="button" name="loginButton" disabled></button>
+            <div>
+                <a href="">não consegue iniciar sessão?</a>
+                <a href="">criar conta</a>
+            </div>
+        </section>
+    </main>
+    <section id="mainImg" alt="image de login">
+        
+    </section>
+</body>
+<script src="./index.js" type="module"></script>
+</html>

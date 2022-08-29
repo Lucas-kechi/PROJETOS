@@ -1,0 +1,21 @@
+body {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button{
+    background-color: white;
+    display: flex;
+    gap: .4rem;
+    border-radius: 25px;
+    cursor: pointer;
+    align-items: center;
+    line-height: 0;
+}
+
+.container button img{
+    height: 40px;
+    flex: 1;
+}

@@ -1,0 +1,17 @@
+
+body{
+    display: flex;
+    gap: 1rem;
+}
+
+#firstColumn {
+    height: 100vh;
+    background-color: lightgrey;
+    flex: 1;
+}
+
+#secondColumn {
+    height: 100vh;
+    border: 3px solid lightgray;
+    flex: 3;
+}
