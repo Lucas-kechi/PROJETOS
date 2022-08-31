@@ -140,12 +140,9 @@ form label {
     align-items: center;
 }
 
-#footer button {
+.custom{
     height: 7vh;
     width: 7vh;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_xsMzW1zoBzAW3jEiVvZEqWIxemlFogHhReK_QKJ0Zu5auAJYlkcoX6BEUuc0ig9_Tak&usqp=CAU);
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 30%;
     border: 2px solid rgba(0, 0, 0, 0.1)
 }
@@ -176,4 +173,9 @@ form label {
 
 button {
     cursor: pointer;
+}
+
+.active-button {
+    background-color: #00a0b9;
+    color: white;
 }
