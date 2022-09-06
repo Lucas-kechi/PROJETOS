@@ -1,26 +1,42 @@
 import { fakeUser } from './fakeUser.js';
 const {userName, userPassword} = fakeUser;
+// import {user, password, loginButton, logo, facebookButton, googleButton, appleButton} from './screenElement';
+
+window.onload = () => {
+    let savedUser = JSON.parse(localStorage.getItem('user'));
+    
+    if(savedUser) {
+        user.value = savedUser.newUser;
+        password.value = savedUser.newPassword;
+        keepLogin.checked = true;
+        Object.assign(loggedUser, savedUser);
+        toggleDisabled();
+    };
+};
 
 const user = document.querySelector("[name=userName]");
 const password = document.querySelector("[name=userPassword]");
 const loginButton = document.querySelector('[name=loginButton]');
 const logo = document.querySelector('#logoSection');
-const facebookButton = document.querySelector('#facebookButton')
-const googleButton = document.querySelector('#googleButton')
-const appleButton = document.querySelector('#appleButton')
-let newUser;
-let newPassword;
+const facebookButton = document.querySelector('#facebookButton');
+const googleButton = document.querySelector('#googleButton');
+const appleButton = document.querySelector('#appleButton');
+const keepLogin = document.querySelector('#checkbox');
+const loggedUser = {
+    newUser: '',
+    newPassword: ''
+};
 
 function getValueFromInput(event) {
     if(event.currentTarget.type === user.type) {
-        newUser = event.currentTarget.value;
+        loggedUser.newUser = event.currentTarget.value;
     } else if(event.currentTarget.type === password.type) {
-        newPassword = event.currentTarget.value;
+        loggedUser.newPassword = event.currentTarget.value;
     };
 };
 
 function toggleDisabled() {
-    if(newUser && newPassword) {
+    if(loggedUser.newUser && loggedUser.newPassword) {
         loginButton.removeAttribute('disabled');
         loginButton.classList.add('active-button')
     } else {
@@ -40,7 +56,7 @@ password.addEventListener('keyup', (event) => {
 });
 
 loginButton.addEventListener('click', () => {
-    if(newUser === userName && newPassword === userPassword){
+    if(loggedUser.newUser === userName && loggedUser.newPassword === userPassword){
         return alert('Você esta logado!')
     } else {
         return alert('Usuário ou senha incorreto')
@@ -52,3 +68,10 @@ facebookButton.addEventListener('click', () => document.location.assign('https:/
 googleButton.addEventListener('click', () => document.location.assign('https://accounts.google.com/'))
 appleButton.addEventListener('click', () => document.location.assign('https://appleid.apple.com/'))
 
+keepLogin.addEventListener('click', (event) => {
+    if(event.target.checked) {
+        localStorage.setItem('user', JSON.stringify(loggedUser));
+    } else {
+        localStorage.removeItem('user')
+    }
+});

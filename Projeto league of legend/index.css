@@ -171,6 +171,10 @@ form label {
     justify-content: center;
 }
 
+#logoSection img{
+    cursor: pointer;
+}
+
 button {
     cursor: pointer;
 }
@@ -178,4 +182,59 @@ button {
 .active-button {
     background-color: #00a0b9;
     color: white;
+}
+
+#modal-section {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(60, 60, 60, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-section nav {
+    height: 60%;
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 0 1em rgba( 0, 0, 0, 1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#close-button {
+    color:  rgb(102, 102, 102);
+    margin-left: 96%;
+    padding: 0;
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+#close-button:hover {
+    color: black;
+}
+
+#modal-section nav div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#modal-text {
+    color: rgb(17, 17, 17);
+    font-size: 1.5vw;
+    font-weight: 1200;
+    padding-bottom: 0;
+}
+
+#send-button {
+    width: 15%;
+    border: 2px solid rgba(0, 0, 0, 0.1)
 }
