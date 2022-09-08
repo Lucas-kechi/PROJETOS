@@ -19,36 +19,20 @@ section {
 }
 
 #colorsBorder {
-    width: 50%;
-    height: 20%;
+    width: auto;
+    height: 18%;
     display: flex;
     gap: .4rem;
 }
 
 #colorsBorder span {
     border: 7px solid black;
-    flex: 1;
+    flex-basis: 5rem;
     cursor: pointer;
 }
 
-.bgBlack {
-    background-color: black;
-}
-
-.bgRed {
-    background-color: red;
-}
-
-.bgBlue {
-    background-color: blue;
-}
-
-.bgGreen {
-    background-color: green;
-}
-
 #grid {
-    width: 100%;
+    width: auto;
     height: 78%;
     display: flex;
     flex-wrap: wrap;
@@ -56,31 +40,56 @@ section {
 }
 
 #grid span {
-    flex: 1 1 19%;
+    flex-grow: 1;
+    /* flex-basis: min 507px; max 761px; para 2x2 634*/
+    /* flex-basis: min 379px; max 506px; para 3x3 442.5 var-191,5*/
+    /* flex-basis: min 303px; max 378px; para 4x4 340.5 var-102*/
+    /* flex-basis: min 252px; max 302px; para 5x5 277 var-63,5*/
+    /* flex-basis: min 215px; max 251px; para 6x6 233 var-44*/
+    /* flex-basis: 215px; */
     border: 2px solid black;
 }
 
 #gridDimension {
     display: flex;
-    width: 25%;
-    justify-content: space-between;
+    width: fit-content;
+    gap: .9rem;
 }
 
 #dimensionInput {
-    width: 70%;
+    background-color: lightgray;
+    width: 15rem;
+    border-radius: 25px;
+    border: none;
+    padding-left: 10px;
+}
+
+#dimensionInput:focus {
+    background-color: white;
 }
 
 #dimensionInput::placeholder {
     text-transform: uppercase;
+    padding-left: 3px;
 }
 
-button {
-    background-color: lightblue;
+#gridDimension button {
+    background-color: lightgray;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: 600;
+}
+
+#gridDimension button:hover:not(:disabled) {
+    background-color: lightblue;
+}
+
+#gridDimension button:disabled {
+    cursor: default;
 }
 
 #colorsBorder button {
+    cursor: pointer;
     padding: 0;
     border: none;
     background-color: white;

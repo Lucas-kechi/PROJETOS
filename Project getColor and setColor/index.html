@@ -9,23 +9,20 @@
 </head>
 <body>
     <section>
-    <div id="colorsBorder">
-        <span class="bgBlack"></span>
-        <span class="bgRed"></span>
-        <span class="bgBlue"></span>
-        <span class="bgGreen"></span>
-        <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
-            <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
-            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-          </svg></button>
-    </div>
-    <div id="gridDimension">
-    <input id="dimensionInput" type="text" placeholder="Enter your grid dimension">
-    <button>Clear Grid</button>
-    </div>
-    <div id="grid">
-        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
+        <h2>Make your painel colors </h2>
+        <p><small>Just click on add button</small></p>
+        <div id="colorsBorder">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-plus" viewBox="0 0 16 16">
+                <path d="M8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z"/>
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+            </svg></button>
+        </div>
+        <div id="gridDimension">
+            <input id="dimensionInput" type="number" placeholder="Enter your grid dimension" max="9" min="1" required>
+            <button id="enterGrid" disabled>Enter Grid</button>
+            <button id="buttonClearColorGrid">Clear Color</button>
+        </div>
+        <div id="grid"></div>
     </section>
 </body>
 <script src="./script.js"></script>
