@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    font-size: 1vw;
+}
+
+body {
+    height: 120vh;
+    background-color: #22212c;
+    color: #837e9f;
+    display: grid;
+    grid-template-areas: "header main" "footer footer";
+    grid-template-rows: 1fr 4vh;
+    grid-template-columns: 20vw 1fr;
+
+}
+
+header {
+    margin: 1rem 0;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section {
+    width: 15vw;
+    background-color: #302f3d;
+    border-radius: 15px;
+    box-shadow: 0 0 1em rgba( 0, 0, 0, 1);
+    padding: .8rem;
+}
+
+#profile {
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+}
+
+#profile img {
+    height: 12vh;
+    width: 6vw;
+    border-radius: 100px;
+    border: 2px solid #00ff00;
+}
+
+#profile p{
+    cursor: default;
+}
+
+#profile p:nth-child(2) {
+    font-size: 1.2vw;
+}
+
+#links {
+    height: fit-content;
+}
+
+#links nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: .8rem;
+    list-style: none;
+    padding-left: .8rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: rgb(131, 126, 159);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+nav ul a:hover {
+    color: rgb(150, 145, 179);
+}
+
+#tecnologias {
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+h3 {
+    font-size: 1.2vw;
+}
+
+#tecnologias div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    padding-left: .4rem;
+}
+
+#tecnologias div span {
+    font-size: 0.8vw;
+    color: #000000;
+    background-color: #cb92b1;
+    padding: 0 .6rem;
+    flex-basis: 2vw;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#experiencias {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    gap: 2rem;
+}
+
+main section {
+    width: 75vw;
+    background-color: #302f3d;
+    border-radius: 15px;
+    box-shadow: 0 0 1em rgba( 0, 0, 0, 1);
+    padding: .8rem;
+    margin-right: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+#my-projects {
+    display: flex;
+    justify-content: space-between;
+}
+
+main h2 {
+    font-size: 1.5vw;
+}
+
+#my-projects a {
+    color: rgb(131, 126, 159);
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+#my-projects a:hover {
+    color: rgb(150, 145, 179);
+
+}
+
+#projects {
+    background-color: red;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
