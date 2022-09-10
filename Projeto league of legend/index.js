@@ -1,6 +1,6 @@
 import { fakeUser } from './fakeUser.js';
 const {userName, userPassword} = fakeUser;
-// import {user, password, loginButton, logo, facebookButton, googleButton, appleButton} from './screenElement';
+import {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton} from './screenElement.js';
 
 window.onload = () => {
     let savedUser = JSON.parse(localStorage.getItem('user'));
@@ -12,19 +12,7 @@ window.onload = () => {
         Object.assign(loggedUser, savedUser);
         toggleDisabled();
     };
-};
 
-const user = document.querySelector("[name=userName]");
-const password = document.querySelector("[name=userPassword]");
-const loginButton = document.querySelector('[name=loginButton]');
-const logo = document.querySelector('#logoSection');
-const facebookButton = document.querySelector('#facebookButton');
-const googleButton = document.querySelector('#googleButton');
-const appleButton = document.querySelector('#appleButton');
-const keepLogin = document.querySelector('#checkbox');
-const loggedUser = {
-    newUser: '',
-    newPassword: ''
 };
 
 function getValueFromInput(event) {
@@ -75,3 +63,6 @@ keepLogin.addEventListener('click', (event) => {
         localStorage.removeItem('user')
     }
 });
+
+canNotLogin.addEventListener('click', () => modalBlock.setAttribute('style', 'display: flex'));
+closeButton.addEventListener('click', () => modalBlock.setAttribute('style', 'display: none'));
