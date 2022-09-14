@@ -36,14 +36,14 @@
               </svg></button>
             <div>
                 <a href="#" id="canNotLogin">não consegue iniciar sessão?</a>
-                <a href="#">criar conta</a>
+                <a href="#" id="make-account">criar conta</a>
             </div>
         </section>
     </main>
     <section id="mainImg" alt="imagem de login"></section>
-    <section id="modal-section">
+    <section id="modal-section-can-not-login" class="modal-section">
         <nav>
-            <button id="close-button">
+            <button id="close-button-can-not-login" class="close-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                 </svg>
@@ -52,9 +52,19 @@
                 <h5 id="modal-text">Digite seu e-mail para redefinir a sua senha</h5>
                 <form>
                     <input type="email" placeholder="Email">
-                    <button id="send-button" disabled>Enviar</button>
+                    <button id="send-button-can-not-login" class="send-button" disabled>Enviar</button>
                 </form>
             </div>
+        </nav>
+    </section>
+    <section id="modal-section-make-account" class="modal-section">
+        <nav>
+            <button id="close-button-make-account" class="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <button id="sen-button-make-account" class="send-button" disabled>Enviar</button>
         </nav>
     </section>
 </body>

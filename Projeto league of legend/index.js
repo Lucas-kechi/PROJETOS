@@ -1,5 +1,6 @@
 import { fakeUser } from './fakeUser.js';
-import {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton, recoverEmail, buttonRecoverEmail, modalContent} from './screenElement.js';
+import {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton, 
+    recoverEmail, buttonRecoverEmail, modalContent, modalMakeCount, makeCount, closeButtonMakeCount} from './screenElement.js';
 
 const {userName, userPassword} = fakeUser;
 
@@ -52,10 +53,10 @@ loginButton.addEventListener('click', () => {
     };
 });
 
-logo.addEventListener('click', () => document.location.assign('https://www.leagueoflegends.com/pt-br/'))
-facebookButton.addEventListener('click', () => document.location.assign('https://www.facebook.com'))
-googleButton.addEventListener('click', () => document.location.assign('https://accounts.google.com/'))
-appleButton.addEventListener('click', () => document.location.assign('https://appleid.apple.com/'))
+logo.addEventListener('click', () => document.location.assign('https://www.leagueoflegends.com/pt-br/'));
+facebookButton.addEventListener('click', () => document.location.assign('https://www.facebook.com'));
+googleButton.addEventListener('click', () => document.location.assign('https://accounts.google.com/'));
+appleButton.addEventListener('click', () => document.location.assign('https://appleid.apple.com/'));
 
 keepLogin.addEventListener('click', (event) => {
     if(event.target.checked) {
@@ -66,6 +67,7 @@ keepLogin.addEventListener('click', (event) => {
 });
 
 canNotLogin.addEventListener('click', () => modalBlock.setAttribute('style', 'display: flex'));
+
 closeButton.addEventListener('click', () => {
     modalBlock.setAttribute('style', 'display: none');
     if(modalContent.children.length === 3) {
@@ -76,6 +78,7 @@ closeButton.addEventListener('click', () => {
         buttonRecoverEmail.classList.remove('active-button');
     }
 });
+
 recoverEmail.addEventListener('keyup', (event) => {
     if(event.currentTarget.value.match(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g)) {
         buttonRecoverEmail.removeAttribute('disabled');
@@ -85,6 +88,7 @@ recoverEmail.addEventListener('keyup', (event) => {
         buttonRecoverEmail.classList.remove('active-button');
     }
 });
+
 buttonRecoverEmail.addEventListener('click', () => {
     const h5 = document.createElement('h5');
     
@@ -96,3 +100,6 @@ buttonRecoverEmail.addEventListener('click', () => {
     modalContent.childNodes.forEach(el => el.nodeName != '#text' && el.setAttribute('style', 'display: none'));
     modalContent.append(h5);
 });
+
+makeCount.addEventListener('click', () => modalMakeCount.setAttribute('style', 'display: flex'));
+closeButtonMakeCount.addEventListener('click', () => modalMakeCount.setAttribute('style', 'display: none'));
