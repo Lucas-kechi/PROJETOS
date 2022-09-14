@@ -1,6 +1,7 @@
 import { fakeUser } from './fakeUser.js';
+import {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton, recoverEmail, buttonRecoverEmail, modalContent} from './screenElement.js';
+
 const {userName, userPassword} = fakeUser;
-import {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton} from './screenElement.js';
 
 window.onload = () => {
     let savedUser = JSON.parse(localStorage.getItem('user'));
@@ -65,4 +66,33 @@ keepLogin.addEventListener('click', (event) => {
 });
 
 canNotLogin.addEventListener('click', () => modalBlock.setAttribute('style', 'display: flex'));
-closeButton.addEventListener('click', () => modalBlock.setAttribute('style', 'display: none'));
+closeButton.addEventListener('click', () => {
+    modalBlock.setAttribute('style', 'display: none');
+    if(modalContent.children.length === 3) {
+        modalContent.lastChild.remove();
+        modalContent.childNodes.forEach(el => el.nodeName != '#text' && el.setAttribute('style', 'display: flex'));
+        recoverEmail.value = '';
+        buttonRecoverEmail.setAttribute('disabled', '');
+        buttonRecoverEmail.classList.remove('active-button');
+    }
+});
+recoverEmail.addEventListener('keyup', (event) => {
+    if(event.currentTarget.value.match(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/g)) {
+        buttonRecoverEmail.removeAttribute('disabled');
+        buttonRecoverEmail.classList.add('active-button');
+    } else {
+        buttonRecoverEmail.setAttribute('disabled', '');
+        buttonRecoverEmail.classList.remove('active-button');
+    }
+});
+buttonRecoverEmail.addEventListener('click', () => {
+    const h5 = document.createElement('h5');
+    
+
+    h5.setAttribute('id', 'modal-text');
+    h5.setAttribute('style', 'margin-top: 20%');
+    h5.innerText = 'Email com nova senha enviado!';
+
+    modalContent.childNodes.forEach(el => el.nodeName != '#text' && el.setAttribute('style', 'display: none'));
+    modalContent.append(h5);
+});

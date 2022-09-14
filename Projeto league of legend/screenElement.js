@@ -9,9 +9,12 @@ const keepLogin = document.querySelector('#checkbox');
 const modalBlock = document.querySelector('#modal-section');
 const canNotLogin = document.querySelector('#canNotLogin');
 const closeButton = document.querySelector('#close-button');
+const recoverEmail = document.querySelector('#modal-content form input');
+const buttonRecoverEmail = document.querySelector('#send-button');
+const modalContent = document.querySelector('#modal-content');
 const loggedUser = {
     newUser: '',
     newPassword: ''
 };
 
-export {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton};
+export {user, password, loginButton, logo, facebookButton, googleButton, appleButton, keepLogin, loggedUser, modalBlock, canNotLogin, closeButton, recoverEmail, buttonRecoverEmail, modalContent};
