@@ -55,20 +55,26 @@ header section {
 }
 
 #links {
-    height: fit-content;
+    height: 22%;
+}
+
+#links nav {
+    height: 100%;
+    width: 100%;
 }
 
 #links nav ul {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    justify-content: baseline;
-    gap: .8rem;
+    justify-content: space-between;
     list-style: none;
     padding-left: .8rem;
 }
 
 nav ul a {
+    width: fit-content;
+    height: 140%;
     text-decoration: none;
     color: rgb(131, 126, 159);
     display: flex;
@@ -78,6 +84,7 @@ nav ul a {
 
 nav ul a:hover {
     color: rgb(150, 145, 179);
+    font-size: 1.05vw;
 }
 
 #tecnologias {
@@ -131,7 +138,6 @@ main section {
     background-color: rgb(48, 47, 61);
     border-radius: 15px;
     box-shadow: 0 0 1em rgba( 0, 0, 0, 1);
-    padding: .8rem;
     margin-right: 1rem;
     padding: 1rem 1.5rem;
 }
@@ -149,10 +155,12 @@ main h2 {
     color: rgb(131, 126, 159);
     text-decoration: none;
     font-size: 1.2vw;
+    box-sizing: content-box;
 }
 
 #my-projects a:hover {
     color: rgb(150, 145, 179);
+    font-size: 1.3vw;
 
 }
 
