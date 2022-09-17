@@ -124,6 +124,21 @@ h3 {
     gap: .8rem;
 }
 
+#educacao a {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    width: fit-content;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgb(170, 165, 199);
+    /* padding: .025vw; */
+}
+
+#educacao a:hover {
+    color: rgb(131, 126, 159);
+}
+
 main {
     grid-area: main;
     display: flex;
