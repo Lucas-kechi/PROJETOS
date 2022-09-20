@@ -30,6 +30,7 @@ O JavaScript poderá usar o assincronismo a seu favor.*/
 		console.log('Essa função está em um método setTimeout, com intervalo de 1s');
     }, 1000);
 
+const { profileEnd } = require('console');
 const https = require('https'); //Este é o protocolo https
 const API = 'https://jsonplaceholder.typicode.com/users?_limit=2'; // Está é a API
 
@@ -37,5 +38,9 @@ https.get(API, res => {
     console.log(res.statusCode); // Está é a callback
 });
 
-console.log('Conectando API'); // Este console.log irá imprimir antes do console.log da callback, pois ele ainda está em processo de requerimento.
+console.log('Conectando API'); // Este console.log irá imprimir antes do console.log da callback, pois ele ainda está em processo de requerimento
 
+document.querySelectorAll()
+/* No CSS BEM podemos atribuir mais classes sendo o primeiro nome da classe sempre o bloco referido e, quando houver, o segundo nome será o filho do bloco referido, o elemento, 
+com o prefixo de 2 underlines '__", Exemplo: class='header__h1. E quando houver algum atributo que necessite de uma mudança CSS, será o modificador, como disabled temos o prefixo de 
+2 ifens '--' exemplo: class='main__btn--disabled'*/

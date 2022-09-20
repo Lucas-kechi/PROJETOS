@@ -40,8 +40,6 @@ header section {
 }
 
 #profile img {
-    height: 12vh;
-    width: 6vw;
     border-radius: 100px;
     border: 2px solid #00ff00;
 }
