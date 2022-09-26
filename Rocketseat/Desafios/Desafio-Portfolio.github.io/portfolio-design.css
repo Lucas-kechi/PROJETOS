@@ -4,12 +4,12 @@
 }
 
 body {
-    height: 120vh;
+    height: 100%;
     background-color: #22212c;
     color: #837e9f;
     display: grid;
     grid-template-areas: "header main" "footer footer";
-    grid-template-rows: 1fr 4vh;
+    grid-template-rows: 96% 4%;
     grid-template-columns: 20vw 1fr;
 
 }
@@ -20,11 +20,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 5vh;
 }
 
 header section {
-    width: 15vw;
+    width: 80%;
     background-color: #302f3d;
     border-radius: 15px;
     box-shadow: 0 0 1em rgba( 0, 0, 0, 1);
@@ -42,6 +42,8 @@ header section {
 #profile img {
     border-radius: 100px;
     border: 2px solid #00ff00;
+    width: 40%;
+    height: 60%;
 }
 
 #profile p{
@@ -54,6 +56,8 @@ header section {
 
 #links {
     height: 22%;
+    display: flex;
+    height: max-content;
 }
 
 #links nav {
@@ -64,7 +68,7 @@ header section {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 7%;
+    gap: 1vh;
     list-style: none;
     padding-left: .8rem;
 }
@@ -258,4 +262,34 @@ footer {
     grid-area: footer;
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 541px) {
+    header nav svg {
+        width: 16%;
+    }
+
+    header a {
+        font-size: 120%;
+    }
+
+    #profile {
+        height: max-content;
+        padding: 7% 2%;
+    }
+}
+
+@media only screen and (max-width: 913px) {
+    body {
+        height: 100vh;
+    }
+
+    header {
+        gap: 2.5%;
+    }
+
+    #profile {
+        height: max-content;
+        padding: 7% 2%;
+    }
 }
