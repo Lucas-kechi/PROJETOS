@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-areas: "none1 left right none2";
+    grid-template-columns: 14.1vw 36vw 35.7vw;
+}
+
+.pokedexLeftPart {
+    grid-area: left;
+    display: grid;
+    grid-template-areas: "top" "center" "bottom";
+    grid-template-rows: 33% 35% 1fr;
+}
+
+.pokedexLeftPart__commandTop {
+    grid-area: top;
+    display: flex;
+    align-items: center;
+}
+
+.pokedexLeftPart__spanTop {
+    height: 13.9vh;
+    width: 13.9vh;
+    margin-left: 5.7vw;
+    margin-top: 1.1vw;
+    border-radius: 100px;
+    border: 1px solid red;
+}
+
+.pokedexLeftPart__commandCenter {
+    grid-area: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pokedexLeftPart__backgroundCenter {
+    height: 74%;
+    width: 49.6%;
+    margin-left: 1vw;
+    margin-top: 2.8vw;
+    border-radius: 40px;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/deiwwcp-1565df32-2021-4794-b120-79149ab11368.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGVpd3djcC0xNTY1ZGYzMi0yMDIxLTQ3OTQtYjEyMC03OTE0OWFiMTEzNjgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oNi80dZ_aOhbdBlTmKmWr_F1cJJpZc04q09IP0zy6hU);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokedexLeftPart__imgCenter {
+    border: 1px solid red;
+    height: 80%;
+    width: 60%;
+}
+
+.pokedexLeftPart__commandFooter {
+    grid-area: bottom;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pokedexLeftPart__navFooter {
+    height: 54%;
+    width: 22%;
+    margin-top: 4.3vw;
+    margin-right: 5.2vw;
+    display: grid;
+    grid-template-areas: "none1 up none2" "left none3 right" "none4 down none5";
+    grid-template-rows: 32% 39% 1fr;
+    grid-template-columns: 32.2% 39% 1fr;
+}
+
+.pokedexLeftPart__navFooter button:hover {
+    cursor: pointer;
+    background-color: rgba(120, 120, 120, 0.2);
+}
+
+.pokedexLeftPart__upButtonFooter {
+    grid-area: up;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.pokedexLeftPart__rightButtonFooter {
+    grid-area: right;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.pokedexLeftPart__downButtonFooter {
+    grid-area: down;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.pokedexLeftPart__leftButtonFooter {
+    grid-area: left;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.pokedexRightPart {
+    grid-area: right;
+    display: grid;
+    grid-template-areas: "none none none" "1 content 2" "3 filter 4" "none1 none1 none1" "5 inputs 6";
+    grid-template-columns: 14% 1fr 14%;
+    grid-template-rows: 33% 26.3% 12.6% 14% 1fr;
+    color: white;
+}
+
+.pokedexRightPart__content {
+    grid-area: content;
+}
+
+.pokedexRightPart__innerText {
+    height: 91.5%;
+    width: 98.5%;
+    margin-top: 0.4vh;
+    margin-left: 0.2vh;
+    border: 1px solid red;
+    border-radius: 43px;
+}
+
+.pokedexRightPart__filter {
+    grid-area: filter;
+    display: grid;
+    grid-template-areas: "1 2 3 4 5" "6 7 8 9 10";
+    grid-template-columns: 21.5% 19% 19% 19% 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+.pokedexRightPart__filter button {
+    background-color: transparent;
+}
+
+.pokedexRightPart__filter button:hover {
+    cursor: pointer;
+    background-color: rgba(173, 216, 230, 0.2);
+}
+
+.pokedexRightPart__button1 {
+    border-top-left-radius: 10px;
+}
+
+.pokedexRightPart__button5 {
+    border-top-right-radius: 10px;
+}
+
+.pokedexRightPart__button6 {
+    border-bottom-left-radius: 10px;
+}
+
+.pokedexRightPart__button10 {
+    border-bottom-right-radius: 10px;
+}
+
+.pokedexRightPart__inputs {
+    grid-area: inputs;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokedexRightPart__inputs input {
+    height: 53%;
+    width: 32.5%;
+    border-radius: 15px;
+    margin-top: 1.2vh;
+    background-color: transparent;
+    font-size: xx-large;
+    padding-left: 1.5vh;
+    color: antiquewhite;
+}
