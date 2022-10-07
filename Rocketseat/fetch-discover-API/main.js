@@ -44,6 +44,10 @@ async function putUser(id) {
     })
 };
 
+async function deleteUser() {
+    
+}
+
 // postNewUser()
 putUser(2)
 fetchAPI()
