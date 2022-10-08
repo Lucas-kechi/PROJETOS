@@ -15,6 +15,11 @@ body {
     grid-template-columns: 14.1vw 36vw 35.7vw;
 }
 
+.audio {
+    /* display: none; */
+    border: 1px solid red;
+}
+
 .pokedexLeftPart {
     grid-area: left;
     display: grid;
@@ -49,7 +54,7 @@ body {
     margin-left: 1vw;
     margin-top: 2.8vw;
     border-radius: 40px;
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/deiwwcp-1565df32-2021-4794-b120-79149ab11368.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGVpd3djcC0xNTY1ZGYzMi0yMDIxLTQ3OTQtYjEyMC03OTE0OWFiMTEzNjgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oNi80dZ_aOhbdBlTmKmWr_F1cJJpZc04q09IP0zy6hU);
+    background-image: url(./assets/bkforest.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
