@@ -15,9 +15,20 @@ body {
     grid-template-columns: 14.1vw 36vw 35.7vw;
 }
 
+.button {
+    height: 15vh;
+    width: 15vh;
+    background-color: transparent;
+    color: red;
+    border: none;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
 .audio {
-    /* display: none; */
-    border: 1px solid red;
+    display: none;
 }
 
 .pokedexLeftPart {
