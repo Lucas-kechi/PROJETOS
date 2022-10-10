@@ -1,12 +1,9 @@
 window.onload = () => {
     soundTrack.autoplay = true;
     soundOff.style = 'display: none'
-    console.log(soundTrack);
 };
 
 const btnAudio = document.querySelector('#btnAudio')
-
-console.log(btnAudio)
 
 btnAudio.addEventListener('click', () => {
     if(soundTrack.muted === false){
@@ -19,3 +16,14 @@ btnAudio.addEventListener('click', () => {
         soundOff.style = "display: none";
     };
 });
+
+async function getPokemon() {
+    await fetch('https://pokeapi.co/api/v2/pokemon/4/')
+        .then(result => result.json())
+        .then(data => {
+            pokemonImg.src = data.sprites.front_default;
+        })
+        .catch(error => console.error(error))
+}
+
+getPokemon()

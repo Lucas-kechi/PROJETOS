@@ -74,7 +74,7 @@ svg:hover {
 }
 
 .pokedexLeftPart__imgCenter {
-    border: 1px solid red;
+    margin-top: 13vh;
     height: 80%;
     width: 60%;
 }
