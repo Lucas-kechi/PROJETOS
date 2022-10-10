@@ -3,7 +3,10 @@ window.onload = () => {
     soundOff.style = 'display: none'
 };
 
-const btnAudio = document.querySelector('#btnAudio')
+const btnAudio = document.querySelector('#btnAudio');
+const inputName = document.querySelector('#inputName');
+const inputId = document.querySelector('#inputId');
+const btnSearch = document.querySelector('#searchBtn');
 
 btnAudio.addEventListener('click', () => {
     if(soundTrack.muted === false){
@@ -17,13 +20,22 @@ btnAudio.addEventListener('click', () => {
     };
 });
 
-async function getPokemon() {
-    await fetch('https://pokeapi.co/api/v2/pokemon/4/')
+async function getPokemon(nameOrId) {
+    await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}/`)
         .then(result => result.json())
         .then(data => {
             pokemonImg.src = data.sprites.front_default;
-        })
-        .catch(error => console.error(error))
-}
+            pokemonName.textContent = data.name;
+            pokemonContent.textContent = `Height: ${data.height / 10}m Weight: ${data.weight / 10}kg`;
 
-getPokemon()
+            console.log(data);
+        })
+        .catch(error => console.error(error));
+};
+
+btnSearch.addEventListener('click', () => {
+    if(inputName.value) getPokemon(inputName.value)
+    if(inputId.value) getPokemon(inputId.value)
+    else pokemonContent.textContent = 'Pokémon not found! Name or Id Invalid.'
+});
+

@@ -31,6 +31,7 @@
             </div>
         </div>
         <div class="pokedexLeftPart__commandFooter">
+            <div class="pokedexLeftPart__pokemonName" id="pokemonName">charizard</div>
             <div class="pokedexLeftPart__navFooter">
                 <button class="pokedexLeftPart__upButtonFooter"></button>
                 <button class="pokedexLeftPart__rightButtonFooter"></button>
@@ -41,9 +42,7 @@
     </div>
     <div class="pokedexRightPart">
         <div class="pokedexRightPart__content">
-            <div class="pokedexRightPart__innerText">
-                
-            </div>
+            <div class="pokedexRightPart__innerText" id="pokemonContent"></div>
         </div>
         <div class="pokedexRightPart__filter">
             <button class="pokedexRightPart__button1"></button>
@@ -57,9 +56,19 @@
             <button class="pokedexRightPart__button9"></button>
             <button class="pokedexRightPart__button10"></button>
         </div>
+        <div class="pokedexRightPart__controls">
+            <div class="pokedexRightPart__leftRight">
+                <button></button>
+                <button></button>
+            </div>
+            <div class="pokedexRightPart__textSearch">
+                Search 
+                <button id="searchBtn"></button>
+            </div>
+        </div>
         <div class="pokedexRightPart__inputs">
-            <input type="text" class="pokedexRightPart__inputName">
-            <input type="number" class="pokedexRightPart__inputId">
+            <input type="text" class="pokedexRightPart__inputName" id="inputName" placeholder="Pokémon Name">
+            <input type="number" class="pokedexRightPart__inputId" id="inputId" placeholder="Pokémon No">
         </div>
     </div>
     

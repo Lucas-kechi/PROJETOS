@@ -74,7 +74,7 @@ svg:hover {
 }
 
 .pokedexLeftPart__imgCenter {
-    margin-top: 13vh;
+    margin-top: 8vh;
     height: 80%;
     width: 60%;
 }
@@ -83,6 +83,21 @@ svg:hover {
     grid-area: bottom;
     display: flex;
     justify-content: flex-end;
+    gap: 2vh;
+}
+
+.pokedexLeftPart__pokemonName {
+    margin-top: 16vh;
+    height: 27%;
+    width: 31%;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 240%;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: default;
 }
 
 .pokedexLeftPart__navFooter {
@@ -128,10 +143,10 @@ svg:hover {
 .pokedexRightPart {
     grid-area: right;
     display: grid;
-    grid-template-areas: "none none none" "1 content 2" "3 filter 4" "none1 none1 none1" "5 inputs 6";
+    grid-template-areas: "none none none" "1 content 2" "3 filter 4" "none1 controls none2" "5 inputs 6";
     grid-template-columns: 14% 1fr 14%;
     grid-template-rows: 33% 26.3% 12.6% 14% 1fr;
-    color: white;
+    color: rgb(250, 235, 215, 0.7);
 }
 
 .pokedexRightPart__content {
@@ -145,9 +160,13 @@ svg:hover {
     margin-left: 0.2vh;
     border: 1px solid red;
     border-radius: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokedexRightPart__filter {
+    padding: 0 0.8vh 0.5vh 0.5vh;
     grid-area: filter;
     display: grid;
     grid-template-areas: "1 2 3 4 5" "6 7 8 9 10";
@@ -179,6 +198,68 @@ svg:hover {
 .pokedexRightPart__button10 {
     border-bottom-right-radius: 10px;
 }
+.pokedexRightPart__controls {
+    grid-area: controls;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.pokedexRightPart__leftRight {
+    height: 42%;
+    width: 44%;
+    margin-left: 1.5vh;
+    margin-bottom: 1.8vh;
+    display: grid;
+    grid-template-areas: "btn1 btn2";
+    grid-template-columns: 52% 1fr;
+}
+
+.pokedexRightPart__leftRight button{
+    background-color: transparent;
+}
+
+.pokedexRightPart__leftRight button:nth-child(1) {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.pokedexRightPart__leftRight button:nth-child(2) {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pokedexRightPart__leftRight button:hover {
+    cursor: pointer;
+    background-color: rgba(120, 120, 120, 0.2);
+}
+
+.pokedexRightPart__textSearch {
+    height: 45%;
+    width: 35%;
+    margin-right: 2.5vh;
+    margin-bottom: 1.3vh;
+    font-size: xx-large;
+    font-weight: 900;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+}
+
+.pokedexRightPart__textSearch button {
+    height: 100%;
+    width: 30%;
+    margin-right: 1.2vh;
+    border-radius: 100px;
+    background-color: transparent;
+}
+
+.pokedexRightPart__textSearch button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 224, 0.2);
+}
 
 .pokedexRightPart__inputs {
     grid-area: inputs;
@@ -192,7 +273,12 @@ svg:hover {
     border-radius: 15px;
     margin-top: 1.2vh;
     background-color: transparent;
-    font-size: xx-large;
+    font-size: x-large;
     padding-left: 1.5vh;
-    color: antiquewhite;
+    color: rgba(250, 235, 215, 0.7);
+}
+
+.pokedexRightPart__inputs input::placeholder {
+    font-size: large;
+    color: rgba(250, 235, 215, 0.4);
 }
