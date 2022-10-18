@@ -9,34 +9,38 @@ const btnNavUp = document.querySelector('#btnNavUp');
 const btnNavRight = document.querySelector('#btnNavRight');
 const btnNavDown = document.querySelector('#btnNavDown');
 const btnNavLeft = document.querySelector('#btnNavLeft');
+const btnFilter1 = document.querySelector('.pokedexRightPart__button1');
 const defaultImg = 'front_default';
-let spritesArray;
+let api;
 let momentId;
 let spriteMoment;
-let count = 0;
+let frontSprites;
+let index = 4;
+let spriteDirection = 'front';
+let clicks = 0;
 
 window.onload = () => {
     soundTrack.autoplay = true;
     soundOff.style = 'display: none';
 
-    getPokemon('pikachu', defaultImg);
+    getPokemon(defaultImg);
 };
 
-btnAudio.addEventListener('click', () => {
-    if(soundTrack.muted === false){
-        soundTrack.muted = true;
-        soundOn.style = "display: none";
-        soundOff.style = "display: flex";
-    } else {
-        soundTrack.muted = false;
-        soundOn.style = "display: flex";
-        soundOff.style = "display: none";
-    };
-});
+async function getApi(idOrName) {
+    const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName}/`);
+    return await pokemon.json();
+}
 
-function getPokemonImg(data, spriteImg) {
-    spriteMoment = spriteImg;
-    pokemonImg.src = data.sprites[spriteImg];
+api = getApi('pikachu');
+
+async function getPokemonImg(spriteImg) {
+    pokemonImg.srv = '';
+
+    await api
+        .then(data => {
+            pokemonImg.src = data.sprites[spriteImg];
+        })
+        .catch(err => console.error(err));
 }
 
 function pokemonDescription(data) {
@@ -68,26 +72,17 @@ function addSpan(data) {
     });
 };
 
-function navControls(data) {
-    spritesArray = Object.keys(data.sprites);
-    spritesArray.splice(0, 4);  
-    spritesArray.splice(4, 6);
-    count = 0;
-    console.log(spritesArray)
-
-    btnNavUp.addEventListener('click', () => {
-        count++;
-
-        if(count > 3) {
-            count = 0;
-            getPokemonImg(data, spritesArray[count]);
-        } if(data.sprites[spritesArray[count]]) getPokemonImg(data, spritesArray[count])
-        else {
-            count++;
-            getPokemonImg(data, spritesArray[count]);
-        };
-    });
-};
+function navControlUp(count, frontSprites) {
+    console.log('start')
+    count++;
+    
+    if(!frontSprites[count]) count++;
+    if(count > frontSprites.length) count = 0;
+    
+    console.log(count)
+    pokemonImg.srv = '';
+    pokemonImg.src = frontSprites[count];
+}
 
 async function pokemonGenera(nameOrId) {
     await fetch(`https://pokeapi.co/api/v2/pokemon-species/${nameOrId}/`)
@@ -98,22 +93,38 @@ async function pokemonGenera(nameOrId) {
     .catch(err => console.error(err));
 };
 
-async function getPokemon(nameOrId, spriteImg) {
-    const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${nameOrId}/`);
-    const data = await api.json();
-
-    navControls(data);
-    getPokemonImg(data, spriteImg);
-    pokemonDescription(data);
-    removeSpan();
-    addSpan(data);           
-    pokemonGenera(nameOrId);
+async function getPokemon(spriteImg) {
+    await api
+        .then(data => {
+            getPokemonImg(spriteImg);
+            pokemonDescription(data);
+            removeSpan();
+            addSpan(data);           
+            pokemonGenera(data.name);
+        })
+        .catch(err => console.error(err));
 };
 
+btnAudio.addEventListener('click', () => {
+    if(soundTrack.muted === false){
+        soundTrack.muted = true;
+        soundOn.style = "display: none";
+        soundOff.style = "display: flex";
+    } else {
+        soundTrack.muted = false;
+        soundOn.style = "display: flex";
+        soundOff.style = "display: none";
+    };
+});
+
 btnSearch.addEventListener('click', () => {
-    if(inputName.value) getPokemon(inputName.value, defaultImg)
-    else if(inputId.value) getPokemon(inputId.value, defaultImg)
-    else alert('Pokémon not found! Name or Id Invalid.');
+    if(inputName.value) {
+        api = getApi(inputName.value);
+        getPokemon(defaultImg);
+    } else if(inputId.value) {
+        api = getApi(inputId.value);
+        getPokemon(defaultImg);
+    } else alert('Pokémon not found! Name or Id Invalid.');
 });
 
 inputId.addEventListener('focus', (event) => {
@@ -126,5 +137,100 @@ inputName.addEventListener('focus', (event) => {
     inputId.value = '';
 });
 
-btnControlLeft.addEventListener('click', () => getPokemon(--momentId, defaultImg));
-btnControlRight.addEventListener('click', () => getPokemon(++momentId, defaultImg));
+btnControlLeft.addEventListener('click', () => {
+    api = getApi(--momentId);
+    getPokemon(defaultImg);
+});
+btnControlRight.addEventListener('click', () => {
+    api = getApi(++momentId);
+    getPokemon(defaultImg);
+});
+
+btnNavUp.addEventListener('click', async () => {
+    let arraySpritesKeys;
+    let arraySpritesValues;
+
+    index++;
+
+    await api
+        .then(data => {
+            arraySpritesKeys = Object.keys(data.sprites);
+            arraySpritesValues = Object.values(data.sprites);
+            arraySpritesKeys = arraySpritesKeys.map(el => el.split('_').splice(1, 3).join('_'));
+
+            if(index === 8) index = 4;
+            if(arraySpritesValues[index]) getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index]}`)
+            else if (arraySpritesValues[++index]) index === 8 ? getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index = 4]}`) : getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index]}`);
+        })
+        .catch(err => console.error(err));
+});
+
+btnNavDown.addEventListener('click', async () => {
+    let arraySpritesKeys;
+    let arraySpritesValues;
+
+    index--;
+
+    await api
+        .then(data => {
+            arraySpritesKeys = Object.keys(data.sprites);
+            arraySpritesValues = Object.values(data.sprites);
+            arraySpritesKeys = arraySpritesKeys.map(el => el.split('_').splice(1, 3).join('_'));
+
+            if(index === 3) index = 7;
+            if(arraySpritesValues[index]) getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index]}`)
+            else if (arraySpritesValues[--index]) index === 3 ? getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index = 7]}`) : getPokemonImg(`${spriteDirection}_${arraySpritesKeys[index]}`);
+        })
+        .catch(err => console.error(err));
+});
+
+btnNavLeft.addEventListener('click', () => {
+    if(spriteDirection === 'back') {
+        spriteDirection = 'front'
+        index = 4;
+        getPokemonImg('front_default');
+    } else {
+        spriteDirection = 'back';
+        index = 4;
+        getPokemonImg('back_default');
+    }
+});
+
+btnNavRight.addEventListener('click', () => {
+    if(spriteDirection === 'front') {
+        spriteDirection = 'back';
+        index = 4;
+        getPokemonImg('back_default');
+    } else {
+        spriteDirection = 'front'
+        index = 4;
+        getPokemonImg('front_default');
+    }
+});
+
+async function filterType() {
+    await fetch('https://pokeapi.co/api/v2/type/')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+}
+
+filterType()
+
+btnFilter1.addEventListener('click', () => {
+    if(clicks === 1) {
+        btnFilter1.setAttribute('style', 'background-color: rgba(0, 0, 255, 0.4)');
+        typeNormalImg.setAttribute('style', 'display: none');
+        typeFightingImg.setAttribute('style', 'display: show');
+        clicks++;
+    } else if (clicks === 2 ) {
+        btnFilter1.setAttribute('style', 'background-color: transparent');
+        typeNormalImg.setAttribute('style', 'display: show');
+        typeFightingImg.setAttribute('style', 'display: show');
+        clicks = 0;
+    } else {
+        btnFilter1.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.4)');
+        typeFightingImg.setAttribute('style', 'display: none');
+        clicks++;
+    }
+})

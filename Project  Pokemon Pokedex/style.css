@@ -219,9 +219,20 @@ svg:hover {
     background-color: rgba(173, 216, 230, 0.2);
 }
 
+.one-click {
+    background-color: rgba(0, 128, 0, 0.4);
+}
+
 .pokedexRightPart__button1 {
     border-top-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* .pokedexRightPart__button1__typeFightingImg {
+    display: none;
+} */
 
 .pokedexRightPart__button5 {
     border-top-right-radius: 10px;
