@@ -47,10 +47,10 @@ svg:hover {
 .pokedexLeftPart__spanTop {
     height: 13.9vh;
     width: 13.9vh;
-    margin-left: 5.7vw;
+    margin-left: 5.9vw;
     margin-top: 1.1vw;
     border-radius: 100px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .pokedexLeftPart__commandCenter {
@@ -212,6 +212,9 @@ svg:hover {
 
 .pokedexRightPart__filter button {
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pokedexRightPart__filter button:hover {
@@ -219,20 +222,9 @@ svg:hover {
     background-color: rgba(173, 216, 230, 0.2);
 }
 
-.one-click {
-    background-color: rgba(0, 128, 0, 0.4);
-}
-
 .pokedexRightPart__button1 {
     border-top-left-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-/* .pokedexRightPart__button1__typeFightingImg {
-    display: none;
-} */
 
 .pokedexRightPart__button5 {
     border-top-right-radius: 10px;

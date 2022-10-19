@@ -18,12 +18,15 @@ let frontSprites;
 let index = 4;
 let spriteDirection = 'front';
 let clicks = 0;
+let filterButton = false;
 
-window.onload = () => {
+window.onload = async () => {
     soundTrack.autoplay = true;
     soundOff.style = 'display: none';
 
     getPokemon(defaultImg);
+    const pokemons = await fetch('https://pokeapi.co/api/v2/pokemon/').then(response => response.json());
+    const firstPokemon = await fetch('https://pokeapi.co/api/v2/pokemon/1').then(response => response.json());
 };
 
 async function getApi(idOrName) {
@@ -94,6 +97,8 @@ async function pokemonGenera(nameOrId) {
 };
 
 async function getPokemon(spriteImg) {
+    apiLoad.setAttribute('style', 'background-color: rgba(255, 255, 0, 0.5)');
+
     await api
         .then(data => {
             getPokemonImg(spriteImg);
@@ -102,7 +107,8 @@ async function getPokemon(spriteImg) {
             addSpan(data);           
             pokemonGenera(data.name);
         })
-        .catch(err => console.error(err));
+        .catch(err => console.error(err))
+        .finally(() => setTimeout(() => apiLoad.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.5)'), 500));
 };
 
 btnAudio.addEventListener('click', () => {
@@ -140,10 +146,12 @@ inputName.addEventListener('focus', (event) => {
 btnControlLeft.addEventListener('click', () => {
     api = getApi(--momentId);
     getPokemon(defaultImg);
+    spriteDirection = 'front';
 });
 btnControlRight.addEventListener('click', () => {
     api = getApi(++momentId);
     getPokemon(defaultImg);
+    spriteDirection = 'front';
 });
 
 btnNavUp.addEventListener('click', async () => {
@@ -208,14 +216,15 @@ btnNavRight.addEventListener('click', () => {
     }
 });
 
-async function filterType() {
-    await fetch('https://pokeapi.co/api/v2/type/')
+async function filterType(id) {
+    await fetch(`https://pokeapi.co/api/v2/type/${id}/`)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            const pokemonFilter = data.pokemon.map(el => el.pokemon.name);
+            console.log(pokemonFilter)
+        })
         .catch(err => console.error(err));
 }
-
-filterType()
 
 btnFilter1.addEventListener('click', () => {
     if(clicks === 1) {
@@ -227,10 +236,13 @@ btnFilter1.addEventListener('click', () => {
         btnFilter1.setAttribute('style', 'background-color: transparent');
         typeNormalImg.setAttribute('style', 'display: show');
         typeFightingImg.setAttribute('style', 'display: show');
+        filterButton = false;
         clicks = 0;
     } else {
         btnFilter1.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.4)');
         typeFightingImg.setAttribute('style', 'display: none');
+        filterType(1)
+        filterButton = true;
         clicks++;
     }
 })
