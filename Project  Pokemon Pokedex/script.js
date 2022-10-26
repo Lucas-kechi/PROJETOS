@@ -9,16 +9,36 @@ const btnNavUp = document.querySelector('#btnNavUp');
 const btnNavRight = document.querySelector('#btnNavRight');
 const btnNavDown = document.querySelector('#btnNavDown');
 const btnNavLeft = document.querySelector('#btnNavLeft');
-const btnFilter1 = document.querySelector('.pokedexRightPart__button1');
+const navBtnsFilter = document.querySelectorAll('.pokedexRightPart__filter button');
 const defaultImg = 'front_default';
+const typesImg = [
+    typeNormalImg,
+    typeFightingImg,
+    typeFlyingImg,
+    typePoisonImg,
+    typeGroundImg,
+    typeRockImg,
+    typeBugImg,
+    typeGhostImg,
+    typeSteelImg,
+    typeFireImg,
+    typeWaterImg,
+    typeGrassImg,
+    typeElectricImg,
+    typePsychicImg,
+    typeIceImg,
+    typeDragonImg,
+    typeDarkImg,
+    typeFairyImg
+];
+let pokemonFilter = [];
 let api;
 let momentId;
 let spriteMoment;
 let frontSprites;
 let index = 4;
 let spriteDirection = 'front';
-let clicks = 0;
-let filterButton = false;
+let filterIndex = 0;
 
 window.onload = async () => {
     soundTrack.autoplay = true;
@@ -111,6 +131,39 @@ async function getPokemon(spriteImg) {
         .finally(() => setTimeout(() => apiLoad.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.5)'), 500));
 };
 
+async function filterType(id) {
+    await fetch(`https://pokeapi.co/api/v2/type/${id}/`)
+        .then(response => response.json())
+        .then(data => {
+            const arrayData = data.pokemon.map(el => el.pokemon.name);
+            pokemonFilter = pokemonFilter.concat(arrayData);
+            api = getApi(arrayData[filterIndex = 0]);
+            getPokemon(defaultImg);
+        })
+        .catch(err => console.error(err));
+};
+
+function filterButton(referenceButton, typeId1, typeId2, imgId1, imgId2) {
+    if(referenceButton.value == 1) {
+        referenceButton.setAttribute('style', 'background-color: rgba(0, 0, 255, 0.4)');
+        imgId1.setAttribute('style', 'display: none');
+        imgId2.setAttribute('style', 'display: show');
+        filterType(typeId2)
+        referenceButton.value++;
+    } else if (referenceButton.value == 2 ) {
+        referenceButton.setAttribute('style', 'background-color: transparent');
+        imgId1.setAttribute('style', 'display: show');
+        imgId2.setAttribute('style', 'display: show');
+        referenceButton.value = 0;
+        pokemonFilter = []
+    } else {
+        referenceButton.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.4)');
+        imgId2.setAttribute('style', 'display: none');
+        filterType(typeId1)
+        referenceButton.value = 1;
+    };
+};
+
 btnAudio.addEventListener('click', () => {
     if(soundTrack.muted === false){
         soundTrack.muted = true;
@@ -144,14 +197,26 @@ inputName.addEventListener('focus', (event) => {
 });
 
 btnControlLeft.addEventListener('click', () => {
-    api = getApi(--momentId);
-    getPokemon(defaultImg);
-    spriteDirection = 'front';
+    if(pokemonFilter.length != 0) {
+        api = filterIndex === 0 ? getApi(pokemonFilter[filterIndex = pokemonFilter.length - 1]) : getApi(pokemonFilter[--filterIndex]);
+        getPokemon(defaultImg);
+        spriteDirection = 'front';
+    } else {
+        api = getApi(--momentId);
+        getPokemon(defaultImg);
+        spriteDirection = 'front';
+    }
 });
 btnControlRight.addEventListener('click', () => {
-    api = getApi(++momentId);
-    getPokemon(defaultImg);
-    spriteDirection = 'front';
+    if(pokemonFilter.length != 0) {
+        api = filterIndex === pokemonFilter.length - 1 ? getApi(pokemonFilter[filterIndex = 0]) : getApi(pokemonFilter[++filterIndex]);
+        getPokemon(defaultImg);
+        spriteDirection = 'front';
+    } else {
+        api = getApi(++momentId);
+        getPokemon(defaultImg);
+        spriteDirection = 'front';
+    }
 });
 
 btnNavUp.addEventListener('click', async () => {
@@ -216,33 +281,16 @@ btnNavRight.addEventListener('click', () => {
     }
 });
 
-async function filterType(id) {
-    await fetch(`https://pokeapi.co/api/v2/type/${id}/`)
-        .then(response => response.json())
-        .then(data => {
-            const pokemonFilter = data.pokemon.map(el => el.pokemon.name);
-            console.log(pokemonFilter)
-        })
-        .catch(err => console.error(err));
-}
-
-btnFilter1.addEventListener('click', () => {
-    if(clicks === 1) {
-        btnFilter1.setAttribute('style', 'background-color: rgba(0, 0, 255, 0.4)');
-        typeNormalImg.setAttribute('style', 'display: none');
-        typeFightingImg.setAttribute('style', 'display: show');
-        clicks++;
-    } else if (clicks === 2 ) {
-        btnFilter1.setAttribute('style', 'background-color: transparent');
-        typeNormalImg.setAttribute('style', 'display: show');
-        typeFightingImg.setAttribute('style', 'display: show');
-        filterButton = false;
-        clicks = 0;
-    } else {
-        btnFilter1.setAttribute('style', 'background-color: rgba(0, 255, 0, 0.4)');
-        typeFightingImg.setAttribute('style', 'display: none');
-        filterType(1)
-        filterButton = true;
-        clicks++;
-    }
+navBtnsFilter.forEach(el => {
+    el.addEventListener('click', () => {
+        if(el.classList.contains('pokedexRightPart__button1')) filterButton(el, 1, 2, typesImg[0], typesImg[1])
+        else if(el.classList.contains('pokedexRightPart__button2')) filterButton(el, 3, 4, typesImg[2], typesImg[3])
+        else if(el.classList.contains('pokedexRightPart__button3')) filterButton(el, 5, 6, typesImg[4], typesImg[5])
+        else if(el.classList.contains('pokedexRightPart__button4')) filterButton(el, 7, 8, typesImg[6], typesImg[7])
+        else if(el.classList.contains('pokedexRightPart__button5')) filterButton(el, 9, 10, typesImg[8], typesImg[9])
+        else if(el.classList.contains('pokedexRightPart__button6')) filterButton(el, 11, 12, typesImg[10], typesImg[11])
+        else if(el.classList.contains('pokedexRightPart__button7')) filterButton(el, 13, 14, typesImg[12], typesImg[13])
+        else if(el.classList.contains('pokedexRightPart__button8')) filterButton(el, 15, 16, typesImg[14], typesImg[15])
+        else if(el.classList.contains('pokedexRightPart__button9')) filterButton(el, 17, 18, typesImg[16], typesImg[17]);
+    });
 })
